@@ -3,6 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@nextui-org/react": "^2.4.8",
+    "@nextui-org/system": "^2.2.6",
+    "@nextui-org/theme": "^2.2.11",
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
@@ -10,9 +13,15 @@
     "@types/node": "^16.18.119",
     "@types/react": "^18.3.12",
     "@types/react-dom": "^18.3.1",
+    "framer-motion": "^11.11.17",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
+    "react-intersection-observer": "^9.13.1",
+    "react-router-dom": "^7.0.0",
     "react-scripts": "5.0.1",
+    "react-tsparticles": "^2.12.2",
+    "tailwind-scrollbar-hide": "^1.1.7",
+    "tsparticles": "^3.6.0",
     "typescript": "^4.9.5",
     "web-vitals": "^2.1.4"
   },
@@ -39,5 +48,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.15"
   }
 }
