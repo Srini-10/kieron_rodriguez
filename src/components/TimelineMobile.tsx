@@ -1,13 +1,23 @@
 import { useRef, useEffect, useState } from "react";
+import { ReactComponent as Logo } from "../assets/icons/Favicon.svg";
+import Baby1 from "../assets/pictures/1.jpeg";
+import Baby2 from "../assets/pictures/2.jpeg";
+import Baby3 from "../assets/pictures/3.jpeg";
+import Baby4 from "../assets/pictures/4.jpeg";
+import Baby5 from "../assets/pictures/5.jpeg";
+import Baby6 from "../assets/pictures/6.jpeg";
+import Baby7 from "../assets/pictures/7.jpeg";
+import Baby8 from "../assets/pictures/8.jpeg";
+import Baby9 from "../assets/pictures/9.jpeg";
+import Baby10 from "../assets/pictures/10.jpeg";
+import Baby11 from "../assets/pictures/11.jpg";
+import Baby12 from "../assets/pictures/12.jpeg";
 
 const TimelineMobile = () => {
   const pathRef = useRef<SVGPathElement | null>(null);
+  const logoRef = useRef<SVGCircleElement | null>(null);
   const [iconPosition, setIconPosition] = useState({ x: 0, y: 0 });
   const [progress, setProgress] = useState(0);
-
-  if (10 < 0) {
-    console.log(iconPosition);
-  }
 
   const calculatePosition = (progressRatio: number) => {
     if (pathRef.current) {
@@ -75,7 +85,7 @@ const TimelineMobile = () => {
               </h1>
             </div>
             <div className="w-full h-auto rounded-xl overflow-hidden">
-              <img src={"https://i.ibb.co/HrbXJ4t/1.jpg"} alt="" className="" />
+              <img src={Baby1} alt="" className="" />
               <div className="w-full h-[250px] overflow-hidden pt-0.5 mt-2">
                 <h1 className="text-[23px] inter-medium text-white leading-[40px] font-medium mt-3">
                   The Journey
@@ -91,7 +101,7 @@ const TimelineMobile = () => {
               </div>
             </div>
             <div className="w-full h-auto rounded-xl overflow-hidden">
-              <img src={"https://i.ibb.co/MfMCCPW/2.jpg"} alt="" className="" />
+              <img src={Baby2} alt="" className="" />
               <div className="w-full h-[250px] overflow-hidden pt-0.5 mt-2">
                 <h1 className="text-[23px] inter-medium text-white leading-[40px] font-medium mt-3">
                   <span className="bg-clip-text mr-1.5 text-fuchsia-300">
@@ -107,7 +117,7 @@ const TimelineMobile = () => {
               </div>
             </div>
             <div className="w-full h-auto rounded-xl overflow-hidden">
-              <img src={"https://i.ibb.co/4fpq1dG/3.jpg"} alt="" className="" />
+              <img src={Baby3} alt="" className="" />
               <div className="w-full h-[250px] overflow-hidden pt-0.5 mt-2">
                 <h1 className="text-[23px] inter-medium text-white leading-[40px] font-medium mt-3">
                   <span className="bg-clip-text mr-1.5 text-fuchsia-300">
@@ -122,7 +132,7 @@ const TimelineMobile = () => {
               </div>
             </div>
             <div className="w-full h-auto rounded-xl overflow-hidden">
-              <img src={"https://i.ibb.co/2dBwhw2/4.jpg"} alt="" className="" />
+              <img src={Baby4} alt="" className="" />
               <div className="w-full h-[250px] overflow-hidden pt-0.5 mt-2">
                 <h1 className="text-[23px] inter-medium text-white leading-[40px] font-medium mt-3">
                   Hats Off to
@@ -137,7 +147,7 @@ const TimelineMobile = () => {
               </div>
             </div>
             <div className="w-full h-auto rounded-xl overflow-hidden">
-              <img src={"https://i.ibb.co/XzVVNYJ/5.jpg"} alt="" className="" />
+              <img src={Baby5} alt="" className="" />
               <div className="w-full h-[250px] overflow-hidden pt-0.5 mt-2">
                 <h1 className="text-[23px] inter-medium text-white leading-[40px] font-medium mt-3">
                   <span className="bg-clip-text mr-1.5 text-fuchsia-300">
@@ -153,7 +163,7 @@ const TimelineMobile = () => {
               </div>
             </div>
             <div className="w-full h-auto rounded-xl overflow-hidden">
-              <img src={"https://i.ibb.co/R6pC6qz/6.jpg"} alt="" className="" />
+              <img src={Baby6} alt="" className="" />
               <div className="w-full h-[250px] overflow-hidden pt-0.5 mt-2">
                 <h1 className="text-[23px] inter-medium text-white leading-[40px] font-medium mt-3">
                   <span className="bg-clip-text mr-1.5 text-fuchsia-300">
@@ -168,7 +178,7 @@ const TimelineMobile = () => {
               </div>
             </div>
             <div className="w-full h-auto rounded-xl overflow-hidden">
-              <img src={"https://i.ibb.co/VtnwfTP/7.jpg"} alt="" className="" />
+              <img src={Baby7} alt="" className="" />
               <div className="w-full h-[250px] overflow-hidden pt-0.5 mt-2">
                 <h1 className="text-[23px] inter-medium text-white leading-[40px] font-medium mt-3">
                   <span className="bg-clip-text mr-1.5 text-fuchsia-300">
@@ -183,7 +193,7 @@ const TimelineMobile = () => {
               </div>
             </div>
             <div className="w-full h-auto rounded-xl overflow-hidden">
-              <img src={"https://i.ibb.co/vcPrQZc/8.jpg"} alt="" className="" />
+              <img src={Baby8} alt="" className="" />
               <div className="w-full h-[250px] overflow-hidden pt-0.5 mt-2">
                 <h1 className="text-[23px] inter-medium text-white leading-[40px] font-medium mt-3">
                   Golden Hour
@@ -198,7 +208,7 @@ const TimelineMobile = () => {
               </div>
             </div>
             <div className="w-full h-auto rounded-xl overflow-hidden">
-              <img src={"https://i.ibb.co/tHq5Ppg/9.jpg"} alt="" className="" />
+              <img src={Baby9} alt="" className="" />
               <div className="w-full h-[250px] overflow-hidden pt-0.5 mt-2">
                 <h1 className="text-[23px] inter-medium text-white leading-[40px] font-medium mt-3">
                   <span className="bg-clip-text mr-1.5 text-fuchsia-300">
@@ -212,11 +222,7 @@ const TimelineMobile = () => {
                 </p>
               </div>
               <div className="w-full h-auto rounded-xl overflow-hidden">
-                <img
-                  src={"https://i.ibb.co/dKVwt1C/10.jpg"}
-                  alt=""
-                  className=""
-                />
+                <img src={Baby10} alt="" className="" />
                 <div className="w-full h-[250px] overflow-hidden pt-0.5 mt-2">
                   <h1 className="text-[23px] inter-medium text-white leading-[40px] font-medium mt-3">
                     Autumn's Little
@@ -231,11 +237,7 @@ const TimelineMobile = () => {
                 </div>
               </div>
               <div className="w-full h-auto rounded-xl overflow-hidden">
-                <img
-                  src={"https://i.ibb.co/P9WYTn2/11.jpg"}
-                  alt=""
-                  className=""
-                />
+                <img src={Baby11} alt="" className="" />
                 <div className="w-full h-[250px] overflow-hidden pt-0.5 mt-2">
                   <h1 className="text-[23px] inter-medium text-white leading-[40px] font-medium mt-3">
                     Reaching New
@@ -251,11 +253,7 @@ const TimelineMobile = () => {
                 </div>
               </div>
               <div className="w-full h-auto rounded-xl overflow-hidden">
-                <img
-                  src={"https://i.ibb.co/MN4ShhP/12.jpg"}
-                  alt=""
-                  className=""
-                />
+                <img src={Baby12} alt="" className="" />
                 <div className="w-full h-[250px] overflow-hidden pt-0.5 mt-2">
                   <h1 className="text-[23px] inter-medium text-white leading-[40px] font-medium mt-3">
                     <span className="bg-clip-text mr-1.5 text-fuchsia-300">

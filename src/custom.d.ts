@@ -1,6 +1,7 @@
 declare module "*.jpg";
 declare module "*.JPG";
 declare module "*.HEIC";
+declare module "*.heif";
 declare module "*.jpeg";
 declare module "*.png";
 declare module "*.gif";

@@ -1,4 +1,8 @@
 import { Button } from "@nextui-org/react";
+import Name from "../assets/name.svg";
+import Name2 from "../assets/name8.svg";
+import Pop from "../assets/pop.svg";
+import Baloon from "../assets/baloon.svg";
 
 const Navbar = () => {
   return (
@@ -13,7 +17,7 @@ const Navbar = () => {
         <div className="h-[80px] w-[360px] overflow-hidden flex justify-center items-center mx-auto">
           <img
             className="w-full h-auto scale-75 object-cover -mt-3"
-            src={"https://i.ibb.co/6rz7XnS/11.png"}
+            src={Name}
             alt=""
           />
         </div>
@@ -24,12 +28,12 @@ const Navbar = () => {
             </Button>
             <img
               className="absolute z-10 top-7 -left-6 transform -translate-y-1/2 w-10"
-              src={"https://i.ibb.co/SXkZX28/2.png"}
+              src={Pop}
               alt=""
             />
             <img
               className="absolute z-10 -top-2 -right-4 transform -translate-y-1/2 w-14"
-              src={"https://i.ibb.co/t4pLH0D/1.png"}
+              src={Baloon}
               alt=""
             />
           </div>

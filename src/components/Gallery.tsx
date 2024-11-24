@@ -4,18 +4,30 @@ import Minimize from "../assets/icons/Minimize.svg";
 import LeftArrow from "../assets/icons/LeftArrow.svg";
 import RightArrow from "../assets/icons/RightArrow.svg";
 
-// Import your images into an array
+// Import images
+import img1 from "../assets/gallery/1.jpg";
+import img2 from "../assets/gallery/2.jpg";
+import img3 from "../assets/gallery/3.png";
+import img4 from "../assets/gallery/4.jpg";
+import img5 from "../assets/gallery/5.jpg";
+import img6 from "../assets/gallery/6.jpg";
+import img7 from "../assets/gallery/7.jpg";
+import img8 from "../assets/gallery/8.jpg";
+import img9 from "../assets/gallery/9.jpg";
+import img10 from "../assets/gallery/10.jpg";
+
+// Images array with imported variables
 const images = [
-  { url: "https://i.ibb.co/qM5FpSd/IMG-0780.jpg", marginTop: "-30px" },
-  { url: "https://i.ibb.co/RQKB3jz/IMG-1897.jpg", marginTop: "0px" },
-  { url: "https://i.ibb.co/25DBczW/IMG-2126.jpg", marginTop: "-110px" },
-  { url: "https://i.ibb.co/qmvvw5F/IMG-3253.jpg", marginTop: "-30px" },
-  { url: "https://i.ibb.co/pxPK37t/IMG-3443.jpg", marginTop: "0px" },
-  { url: "https://i.ibb.co/3WrtRr4/IMG-3966.jpg", marginTop: "-160px" },
-  { url: "https://i.ibb.co/7gzLxwG/IMG-5838.jpg", marginTop: "0px" },
-  { url: "https://i.ibb.co/5BKmTxx/IMG-5857.jpg", marginTop: "-100px" },
-  { url: "https://i.ibb.co/VgDQyCK/IMG-8032.jpg", marginTop: "-40px" },
-  { url: "https://i.ibb.co/B6kDcv2/IMG-9611.jpg", marginTop: "-50px" },
+  { url: img1, marginTop: "-30px" },
+  { url: img2, marginTop: "0px" },
+  { url: img3, marginTop: "-110px" },
+  { url: img4, marginTop: "-30px" },
+  { url: img5, marginTop: "0px" },
+  { url: img6, marginTop: "-160px" },
+  { url: img7, marginTop: "0px" },
+  { url: img8, marginTop: "-100px" },
+  { url: img9, marginTop: "-40px" },
+  { url: img10, marginTop: "-50px" },
 ];
 
 const Gallery = () => {
