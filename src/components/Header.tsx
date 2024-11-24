@@ -85,31 +85,31 @@ const Header = () => {
             src={P1}
             className="w-[20px] lg:w-[50px] absolute top-10 left-[260px] lg:left-96 transition-transform duration-1000 ease-out"
             style={{ transform: calculateTransform(0.01, 0.01) }}
-            alt="Top Left"
+            alt=""
           />
           <img
             src={P4}
             className="w-[30px] lg:w-[70px] absolute top-20 right-32 transition-transform duration-1000 ease-out"
             style={{ transform: calculateTransform(-0.02, 0.01) }}
-            alt="Top Right"
+            alt=""
           />
           <img
             src={P3}
             className="w-[20px] rotate-12 absolute bottom-16 left-[315px] lg:left-64 transition-transform duration-1000 ease-out"
             style={{ transform: calculateTransform(0.015, -0.015) }}
-            alt="Bottom Left"
+            alt=""
           />
           <img
             src={P2}
             className="w-[15px] lg:w-[50px] absolute bottom-32 lg:right-32 transition-transform duration-1000 ease-out"
             style={{ transform: calculateTransform(-0.01, -0.02) }}
-            alt="Bottom Right"
+            alt=""
           />
           <img
             src={P5}
             className="w-[30px] lg:w-[60px] rotate-90 absolute bottom-6 lg:right-1/3 transition-transform duration-1000 ease-out"
             style={{ transform: calculateTransform(0.02, -0.01) }}
-            alt="Bottom Center"
+            alt=""
           />
         </div>
 
@@ -119,7 +119,7 @@ const Header = () => {
             <img
               className="w-[320px] lg:min-w-[600px] saturate-[1.3] mt-0 lg:ml-28"
               src={Baby}
-              alt="Baby"
+              alt=""
             />
 
             {/* Background image */}
@@ -163,7 +163,7 @@ const Header = () => {
                   Birthday.{" "}
                   <img
                     src={Baloon}
-                    alt="Birthday Cap"
+                    alt=""
                     className="absolute top-[-38px] lg:top-[-103px] rotate-6 right-[-20px] lg:right-[-83px] w-12 lg:w-32 -z-10"
                   />
                 </span>
@@ -175,16 +175,12 @@ const Header = () => {
                   <img
                     className="rotate-90 right-0 w-8 lg:w-10"
                     src={Pop}
-                    alt="Pop"
+                    alt=""
                   />
                 </Button>
                 <Button className="bg-transparent border-[1px] border-violet-300 h-12 w-full rounded-lg flex justify-center items-center gap-x-3 text-[17px] text-black font-bold">
                   See our Gallery{" "}
-                  <img
-                    className="right-0 w-8 lg:w-10"
-                    src={Gallery}
-                    alt="Gallery"
-                  />
+                  <img className="right-0 w-8 lg:w-10" src={Gallery} alt="" />
                 </Button>
               </div>
             </div>

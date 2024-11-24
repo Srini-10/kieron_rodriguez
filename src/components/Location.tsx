@@ -10,7 +10,7 @@ const Location = () => {
     <div className="w-full h-[680px] lg:h-[700px] flex justify-center items-center overflow-hidden p-8 pt-32 relative">
       {/* Map Image */}
       <div className="w-[300px] lg:w-[1000px] lg:h-auto h-[240px] mt-10 lg:mt-0 mx-auto relative">
-        <img src={Map} className="w-full h-auto object-cover" alt="Map" />
+        <img src={Map} className="w-full h-auto object-cover" alt="" />
 
         {/* Dot with spreading wave animation */}
         <div className="absolute top-[143px] right-[81px] lg:top-[47.5%] lg:right-[27.5%] -translate-x-1/2 -translate-y-1/2">
@@ -41,7 +41,7 @@ const Location = () => {
           <img
             src={Line}
             className="w-[30px] lg:w-[40px] absolute -bottom-10 -left-10 -rotate-[130deg] opacity-30 transition-transform duration-1000 ease-out"
-            alt="Top Left"
+            alt=""
           />
           <Link
             to={"https://maps.app.goo.gl/2SUC4vLpsdxqVAEQ9"}

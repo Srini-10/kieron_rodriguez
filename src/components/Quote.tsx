@@ -26,27 +26,27 @@ const Quote = () => {
             <img
               src={P1}
               className="w-[50px] absolute rotate-12 top-10 left-96 transition-transform duration-1000 ease-out"
-              alt="Top Left"
+              alt=""
             />
             <img
               src={P4}
               className="w-[70px] absolute top-14 rotate-45 right-28 transition-transform duration-1000 ease-out"
-              alt="Top Right"
+              alt=""
             />
             <img
               src={P3}
               className="w-[20px] rotate-12 absolute bottom-12 left-60 transition-transform duration-1000 ease-out"
-              alt="Bottom Left"
+              alt=""
             />
             <img
               src={P2}
               className="w-[50px] absolute bottom-20 right-20 rotate-45 transition-transform duration-1000 ease-out"
-              alt="Bottom Right"
+              alt=""
             />
             <img
               src={P5}
               className="w-[50px] rotate-45 absolute bottom-6 right-1/3 transition-transform duration-1000 ease-out"
-              alt="Bottom Center"
+              alt=""
             />
           </div>
         </div>

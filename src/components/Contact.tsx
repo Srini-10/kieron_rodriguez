@@ -107,7 +107,7 @@ const Contact = () => {
           <img
             src={P1}
             className="w-[70px] absolute top-[99px] left-[88px] -rotate-45 transition-transform duration-1000 ease-out"
-            alt="Top Left"
+            alt=""
           />
           <img
             src={Line}
@@ -116,12 +116,12 @@ const Contact = () => {
               transform: calculateTransform(0.01, 0.01),
               rotate: "30deg",
             }}
-            alt="Top Left"
+            alt=""
           />
           <img
             src={P4}
             className="w-[130px] absolute -top-[30px] right-[70px] transition-transform duration-1000 ease-out"
-            alt="Top Right"
+            alt=""
           />
           <img
             src={P3}
@@ -130,13 +130,13 @@ const Contact = () => {
               transform: calculateTransform(0.015, -0.015),
               rotate: "40deg",
             }}
-            alt="Bottom Left"
+            alt=""
           />
           <img
             src={P2}
             className="w-[40px] absolute bottom-16 right-20 transition-transform duration-1000 ease-out"
             style={{ transform: calculateTransform(-0.01, -0.02) }}
-            alt="Bottom Right"
+            alt=""
           />
         </div>
 

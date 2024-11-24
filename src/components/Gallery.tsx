@@ -95,7 +95,7 @@ const Gallery = () => {
               <img
                 src={image}
                 className="top-0 left-0 w-full h-full object-cover rounded-lg"
-                alt={`Image_${index + 1}`}
+                alt=""
               />
 
               {/* Full Screen Button */}
@@ -105,7 +105,7 @@ const Gallery = () => {
                   className="absolute bottom-6 right-6 w-10 h-10 flex justify-center items-center bg-white bg-opacity-20 backdrop-blur-sm border border-opacity-25 border-white rounded-full hover:bg-opacity-30 transition-all duration-500 ease-in-out"
                 >
                   <div className="w-8 h-8 hover:w-10 hover:h-10 bg-white rounded-full flex justify-center items-center transition-all duration-500 ease-in-out">
-                    <img src={FullScreen} className="w-5" alt="Fullscreen" />
+                    <img src={FullScreen} className="w-5" alt="" />
                   </div>
                 </button>
               )}
@@ -117,7 +117,7 @@ const Gallery = () => {
                   className="absolute bottom-6 lg:bottom-0 lg:top-6 right-6 w-10 h-10 flex justify-center items-center bg-white bg-opacity-20 backdrop-blur-sm border border-opacity-25 border-white rounded-full hover:bg-opacity-30 transition-all duration-500 ease-in-out"
                 >
                   <div className="w-8 h-8 hover:w-10 hover:h-10 bg-white rounded-full flex justify-center items-center transition-all duration-500 ease-in-out">
-                    <img src={Minimize} className="w-5" alt="Minimize" />
+                    <img src={Minimize} className="w-5" alt="" />
                   </div>
                 </button>
               )}
@@ -132,14 +132,14 @@ const Gallery = () => {
           <img
             src={images[activeIndex]}
             className="max-w-full max-h-full object-contain"
-            alt="Fullscreen View"
+            alt=""
           />
           <button
             onClick={handleMinimize}
             className="absolute bottom-6 lg:bottom-0 lg:top-6 right-6 w-10 h-10 flex justify-center items-center bg-white bg-opacity-20 backdrop-blur-sm border border-opacity-25 border-white rounded-full hover:bg-opacity-30 transition-all duration-500 ease-in-out"
           >
             <div className="w-8 h-8 hover:w-10 hover:h-10 bg-white rounded-full flex justify-center items-center transition-all duration-500 ease-in-out">
-              <img src={Minimize} className="w-5" alt="Minimize" />
+              <img src={Minimize} className="w-5" alt="" />
             </div>
           </button>
 
@@ -150,7 +150,7 @@ const Gallery = () => {
               className="absolute left-[125px] lg:left-6 bottom-[30px] lg:bottom-0 lg:top-1/2  transform -translate-y-1/2 w-12 h-12 flex justify-center items-center bg-white bg-opacity-20 backdrop-blur-sm border border-opacity-25 border-white rounded-full hover:bg-opacity-30 transition-all duration-500 ease-in-out"
             >
               <div className="w-10 h-10 hover:w-12 hover:h-12 bg-white rounded-full flex justify-center items-center transition-all duration-500 ease-in-out">
-                <img src={LeftArrow} className="w-6" alt="Previous" />
+                <img src={LeftArrow} className="w-6" alt="" />
               </div>
             </button>
           )}
@@ -160,7 +160,7 @@ const Gallery = () => {
               className="absolute right-[125px] lg:right-6 bottom-[30px] lg:bottom-0 lg:top-1/2 transform -translate-y-1/2 w-12 h-12 flex justify-center items-center bg-white bg-opacity-20 backdrop-blur-sm border border-opacity-25 border-white rounded-full hover:bg-opacity-30 transition-all duration-500 ease-in-out"
             >
               <div className="w-10 h-10 hover:w-12 hover:h-12 bg-white rounded-full flex justify-center items-center transition-all duration-500 ease-in-out">
-                <img src={RightArrow} className="w-6" alt="Next" />
+                <img src={RightArrow} className="w-6" alt="" />
               </div>
             </button>
           )}

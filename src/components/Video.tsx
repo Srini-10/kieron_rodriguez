@@ -106,9 +106,9 @@ const Video = () => {
             >
               <div className="w-7 h-7 lg:w-14 lg:h-14 p-[5px] lg:p-0 flex items-center justify-center bg-white border border-gray-200 rounded-full transition-all duration-1000 ease-in-out">
                 {isMuted ? (
-                  <img src={UnMute} alt="Mute Icon" />
+                  <img src={UnMute} alt="" />
                 ) : (
-                  <img src={Mute} alt="Unmute Icon" />
+                  <img src={Mute} alt="" />
                 )}
               </div>
               <div
