@@ -74,19 +74,22 @@ const Gallery = () => {
   };
 
   return (
-    <div className="w-[1280px] h-[600px] overflow-hidden mx-auto flex flex-col justify-center">
-      <h1 className="text-black inter-bold text-[50px]">
-        Take a closer look at our{" "}
-        <span className="bg-violet-500 text-white px-2 -mx-1">
-          togetherness.
+    <div className="w-full lg:w-[1280px] h-[540px] lg:h-[700px] overflow-hidden mx-auto lg:p-0 px-[4vw] flex flex-col justify-center">
+      <h1 className="text-black inter-bold w-auto text-[30px] lg:text-[50px] leading-10 lg:leading-none lg:flex justify-start items-center">
+        Take a closer look at{" "}
+        <span className="text-[25px] lg:text-[50px] flex items-center justify-start lg:ml-2.5">
+          our{" "}
+          <span className="bg-violet-500 text-white px-1.5 lg:px-2 mx-1 lg:mx-2.5 text-[25px] lg:text-[53px] lg:py-2">
+            togetherness.
+          </span>
         </span>
       </h1>
-      <div className="w-full h-[400px] flex justify-start items-center gap-x-5 overflow-x-scroll snap-x scrollbar-hide transition-all duration-1000 ease-in-out">
+      <div className="w-full h-[300px] lg:h-[400px] flex justify-start items-center gap-x-5 overflow-x-scroll snap-x custom-scrollbar transition-all duration-300 lg:duration-1000 ease-in-out">
         {images.map((image, index) => (
           <div
             key={index}
             ref={activeImage === image ? imageRef : null} // Attach ref only to the active image
-            className="min-w-[412px] max-w-[412px] h-[300px] flex justify-start items-center gap-x-5 snap-center transition-all duration-1000 ease-in-out"
+            className="lg:min-w-[412px] lg:max-w-[412px] min-w-[92vw] h-[240px] lg:h-[300px] flex justify-start items-center gap-x-5 snap-start lg:snap-center transition-all duration-300 lg:duration-1000 ease-in-out"
           >
             <div className="w-full h-full border-[1.5px] border-violet-200 rounded-lg p-4 overflow-hidden relative">
               <img
@@ -111,7 +114,7 @@ const Gallery = () => {
               {isFullScreen && activeIndex !== null && (
                 <button
                   onClick={handleMinimize}
-                  className="absolute top-6 right-6 w-10 h-10 flex justify-center items-center bg-white bg-opacity-20 backdrop-blur-sm border border-opacity-25 border-white rounded-full hover:bg-opacity-30 transition-all duration-500 ease-in-out"
+                  className="absolute bottom-6 lg:bottom-0 lg:top-6 right-6 w-10 h-10 flex justify-center items-center bg-white bg-opacity-20 backdrop-blur-sm border border-opacity-25 border-white rounded-full hover:bg-opacity-30 transition-all duration-500 ease-in-out"
                 >
                   <div className="w-8 h-8 hover:w-10 hover:h-10 bg-white rounded-full flex justify-center items-center transition-all duration-500 ease-in-out">
                     <img src={Minimize} className="w-5" alt="Minimize" />
@@ -133,7 +136,7 @@ const Gallery = () => {
           />
           <button
             onClick={handleMinimize}
-            className="absolute top-6 right-6 w-10 h-10 flex justify-center items-center bg-white bg-opacity-20 backdrop-blur-sm border border-opacity-25 border-white rounded-full hover:bg-opacity-30 transition-all duration-500 ease-in-out"
+            className="absolute bottom-6 lg:bottom-0 lg:top-6 right-6 w-10 h-10 flex justify-center items-center bg-white bg-opacity-20 backdrop-blur-sm border border-opacity-25 border-white rounded-full hover:bg-opacity-30 transition-all duration-500 ease-in-out"
           >
             <div className="w-8 h-8 hover:w-10 hover:h-10 bg-white rounded-full flex justify-center items-center transition-all duration-500 ease-in-out">
               <img src={Minimize} className="w-5" alt="Minimize" />
@@ -144,18 +147,17 @@ const Gallery = () => {
           {activeIndex > 0 && (
             <button
               onClick={goToPrevious}
-              className="absolute left-6 top-1/2 transform -translate-y-1/2 w-12 h-12 flex justify-center items-center bg-white bg-opacity-20 backdrop-blur-sm border border-opacity-25 border-white rounded-full hover:bg-opacity-30 transition-all duration-500 ease-in-out"
+              className="absolute left-[125px] lg:left-6 bottom-[30px] lg:bottom-0 lg:top-1/2  transform -translate-y-1/2 w-12 h-12 flex justify-center items-center bg-white bg-opacity-20 backdrop-blur-sm border border-opacity-25 border-white rounded-full hover:bg-opacity-30 transition-all duration-500 ease-in-out"
             >
               <div className="w-10 h-10 hover:w-12 hover:h-12 bg-white rounded-full flex justify-center items-center transition-all duration-500 ease-in-out">
                 <img src={LeftArrow} className="w-6" alt="Previous" />
               </div>
             </button>
           )}
-
           {activeIndex < images.length - 1 && (
             <button
               onClick={goToNext}
-              className="absolute right-6 top-1/2 transform -translate-y-1/2 w-12 h-12 flex justify-center items-center bg-white bg-opacity-20 backdrop-blur-sm border border-opacity-25 border-white rounded-full hover:bg-opacity-30 transition-all duration-500 ease-in-out"
+              className="absolute right-[125px] lg:right-6 bottom-[30px] lg:bottom-0 lg:top-1/2 transform -translate-y-1/2 w-12 h-12 flex justify-center items-center bg-white bg-opacity-20 backdrop-blur-sm border border-opacity-25 border-white rounded-full hover:bg-opacity-30 transition-all duration-500 ease-in-out"
             >
               <div className="w-10 h-10 hover:w-12 hover:h-12 bg-white rounded-full flex justify-center items-center transition-all duration-500 ease-in-out">
                 <img src={RightArrow} className="w-6" alt="Next" />

@@ -80,11 +80,11 @@ const Video = () => {
 
   return (
     <>
-      <div className="max-w-[1440px] mx-auto mt-10 h-[680px] overflow-hidden flex justify-center items-start">
+      <div className="w-[94vw] lg:max-w-[1440px] mx-auto mt-0 lg:mt-10 h-[240px] lg:h-[680px] overflow-hidden flex justify-center items-start">
         <div className="relative cursor-pointer">
           <video
             ref={videoRef}
-            className="rounded-t-3xl shadow-[0_-5px_10px_-12px_rgba(0,0,0,0.3)] cursor-pointer group xl:w-[1100px] mx-auto"
+            className="rounded-t-xl lg:rounded-t-3xl shadow-[0_-5px_10px_-12px_rgba(0,0,0,0.3)] cursor-pointer group lg:w-[1100px] mx-auto"
             muted={isMuted}
             loop
             controls={false}
@@ -102,9 +102,9 @@ const Video = () => {
           {!isFullScreen && (
             <button
               onClick={handleMuteToggle}
-              className="absolute top-8 left-8 flex items-center bg-white bg-opacity-20 backdrop-blur-sm border border-opacity-25 border-white p-[5px] rounded-full hover:bg-opacity-100 transition-all duration-1000 ease-in-out group"
+              className="absolute top-2.5 left-2.5 lg:top-8 lg:left-8 flex items-center bg-white bg-opacity-20 backdrop-blur-sm border border-opacity-25 border-white p-[3px] lg:p-[5px] rounded-full lg:hover:bg-opacity-100 transition-all duration-1000 ease-in-out group"
             >
-              <div className="w-14 h-14 flex items-center justify-center bg-white border border-gray-200 rounded-full transition-all duration-1000 ease-in-out">
+              <div className="w-7 h-7 lg:w-14 lg:h-14 p-[5px] lg:p-0 flex items-center justify-center bg-white border border-gray-200 rounded-full transition-all duration-1000 ease-in-out">
                 {isMuted ? (
                   <img src={UnMute} alt="Mute Icon" />
                 ) : (
@@ -112,10 +112,10 @@ const Video = () => {
                 )}
               </div>
               <div
-                className="relative overflow-hidden max-w-0 group-hover:max-w-xs transition-all duration-1000 ease-in-out"
+                className="hidden lg:block relative overflow-hidden max-w-0 group-hover:max-w-xs transition-all duration-1000 ease-in-out"
                 style={{ width: "fit-content" }}
               >
-                <span className="text-md font-semibold pl-3 pr-4 whitespace-nowrap">
+                <span className="text-sm lg:text-md font-semibold pl-3 pr-4 whitespace-nowrap">
                   {isMuted ? "Listen" : "Mute"}
                 </span>
               </div>
@@ -126,9 +126,9 @@ const Video = () => {
           {!isFullScreen && (
             <button
               onClick={handleFullScreen}
-              className="absolute bottom-5 right-5 w-10 h-10 flex justify-center items-center bg-white bg-opacity-20 backdrop-blur-sm border border-opacity-25 border-white rounded-full hover:bg-opacity-30 transition-all duration-500 ease-in-out"
+              className="absolute bottom-4 right-3 lg:bottom-5 lg:right-5 w-10 h-10 flex justify-center items-center bg-white bg-opacity-20 backdrop-blur-sm border border-opacity-25 border-white rounded-full hover:bg-opacity-30 transition-all duration-500 ease-in-out"
             >
-              <div className="w-8 h-8 hover:w-10 hover:h-10 bg-white rounded-full flex justify-center items-centers transition-all duration-500 ease-in-out">
+              <div className="w-8 h-8 hover:w-10 hover:h-10 bg-white rounded-full flex justify-center items-center transition-all duration-500 ease-in-out">
                 <img src={FullScreen} className="w-5" alt="" />
               </div>
             </button>

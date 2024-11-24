@@ -5,6 +5,14 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
+  overscroll-behavior: none;
+  transform: translateY(0);
+  transition: transform 2s ease-in-out;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 code {
@@ -56,6 +64,13 @@ code {
   font-style: normal;
 }
 
+.inter-light {
+  font-family: "Inter", serif;
+  font-optical-sizing: auto;
+  font-weight: 450;
+  font-style: normal;
+}
+
 .inter-medium {
   font-family: "Inter", serif;
   font-optical-sizing: auto;
@@ -84,4 +99,52 @@ code {
   font-style: normal;
   font-variation-settings: "slnt" 0, "wdth" 100, "GRAD" 0, "XOPQ" 96, "XTRA" 468,
     "YOPQ" 79, "YTAS" 750, "YTDE" -203, "YTFI" 738, "YTLC" 514, "YTUC" 712;
+}
+
+/* Scrollbar UI */
+.custom-scrollbar {
+  overflow-x: auto; /* Enable horizontal scrolling */
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  height: 5px; /* Reduce the scrollbar thickness */
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: #f0f0f0;
+  border-radius: 5px;
+  margin: 0 500px; /* Adds padding to make the scrollbar visually shorter */
+}
+
+@media (max-width: 768px) {
+  .custom-scrollbar::-webkit-scrollbar-track {
+    margin: 0 30vw; /* Further reduced for tablets */
+  }
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: linear-gradient(45deg, #8b5cf6, #c084fc);
+  border-radius: 5px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(45deg, #c084fc, #8b5cf6);
+}
+
+/* Wave Animation */
+@keyframes wave {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(4); /* Spreads outward */
+    opacity: 0; /* Fades out */
+  }
+}
+
+.animate-wave {
+  animation: wave 2s infinite ease-out;
+  z-index: 0;
+  position: absolute;
 }

@@ -1,17 +1,14 @@
-import Baby from "../assets/pictures/baby3.png";
+import { useState, useEffect } from "react";
 import { Button } from "@nextui-org/react";
 import Pop from "../assets/pop.svg";
 import Gallery from "../assets/gallery.svg";
 import Cap from "../assets/cap.svg";
-import Cap2 from "../assets/cap2.svg";
-import Baloon from "../assets/baloon2.svg";
 import Candle from "../assets/candle.svg";
 import P1 from "../assets/pop1.svg";
 import P2 from "../assets/pop2.svg";
 import P3 from "../assets/pop3.svg";
 import P4 from "../assets/pop4.svg";
 import P5 from "../assets/pop5.svg";
-import { useEffect, useState } from "react";
 
 const Header2 = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
@@ -56,130 +53,105 @@ const Header2 = () => {
   ];
 
   return (
-    <>
-      <div
-        onMouseMove={handleMouseMove}
-        className="max-w-[1440px] mx-auto h-[681px] overflow-hidden flex justify-between relative items-center"
-      >
-        <div className="w-full h-full absolute -z-20">
-          <svg
-            viewBox="0 0 360 50"
-            xmlns="http://www.w3.org/2000/svg"
-            className="absolute top-0 left-0 w-full h-full"
-          >
-            {curves.map((curve, index) => (
-              <path
-                key={index}
-                d={curve}
-                stroke="#fbf8ff"
-                strokeWidth="0.5"
-                fill="transparent"
-                className="animate-line -rotate-2 -translate-x-0.5"
+    <div
+      onMouseMove={handleMouseMove}
+      className="relative w-full h-[calc(100vh-104px)] overflow-hidden"
+    >
+      {/* SVG Animated Lines */}
+      <div className="w-full h-full absolute z-0">
+        <svg
+          viewBox="0 0 360 50"
+          xmlns="http://www.w3.org/2000/svg"
+          className="absolute top-0 left-0 w-full h-full"
+        >
+          {curves.map((curve, index) => (
+            <path
+              key={index}
+              d={curve}
+              stroke="#fbf8ff"
+              strokeWidth="0.5"
+              fill="transparent"
+              className="animate-line -rotate-2 -translate-x-0.5"
+            />
+          ))}
+        </svg>
+      </div>
+
+      {/* Animated Images */}
+      <div className="w-full h-full absolute z-50 bg-white bg-opacity-10">
+        <img
+          src={P1}
+          className="w-[50px] absolute top-32 left-32 transition-transform duration-1000 ease-out"
+          style={{ transform: calculateTransform(0.01, 0.01) }}
+          alt="Top Left"
+        />
+        <img
+          src={P4}
+          className="w-[70px] absolute top-20 right-32 transition-transform duration-1000 ease-out"
+          style={{ transform: calculateTransform(-0.02, 0.01) }}
+          alt="Top Right"
+        />
+        <img
+          src={P3}
+          className="w-[60px] rotate-12 absolute bottom-40 left-64 transition-transform duration-1000 ease-out"
+          style={{ transform: calculateTransform(0.015, -0.015) }}
+          alt="Bottom Left"
+        />
+        <img
+          src={P2}
+          className="w-[50px] absolute bottom-32 right-32 transition-transform duration-1000 ease-out"
+          style={{ transform: calculateTransform(-0.01, -0.02) }}
+          alt="Bottom Right"
+        />
+        {/* <img
+          src={P5}
+          className="w-[60px] rotate-90 absolute bottom-6 right-1/3 transition-transform duration-1000 ease-out"
+          style={{ transform: calculateTransform(0.02, -0.01) }}
+          alt="Center"
+        /> */}
+      </div>
+
+      {/* Main Content */}
+      <div className="relative w-full h-full pt-32">
+        <h1 className="relative text-[66px] text-center rotate-1 inter-extrabold z-10">
+          We invite you to{" "}
+          <span className="bg-violet-600 text-white -mx-2 px-2">celebrate</span>
+        </h1>
+        <p className="text-[66px] text-center inter-extrabold -rotate-2 mt-1 flex justify-center items-center">
+          <span className="text-violet-600 underline">Kieron Rodriguez's</span>{" "}
+          <span className="flex mx-5">
+            f
+            <span className="w-3 h-[80px] overflow-hidden">
+              <img
+                src={Candle}
+                className="h-full w-auto ml-0.5 mt-[2px] object-cover"
+                alt=""
               />
-            ))}
-          </svg>
-        </div>
+            </span>
+            rst
+          </span>
+          <span className="bg-rose-100 px-2 -mx-2 relative inline-block">
+            Birthday.{" "}
+            <img
+              src={Cap}
+              alt="Birthday Cap"
+              className="absolute top-[-43px] rotate-6 right-[-38px] w-28 h-28"
+            />
+          </span>
+        </p>
 
-        <div className="w-full h-full absolute bg-white bg-opacity-10">
-          <img
-            src={P1}
-            className="w-[50px] absolute top-10 left-96 transition-transform duration-1000 ease-out"
-            style={{ transform: calculateTransform(0.01, 0.01) }}
-            alt="Top Left"
-          />
-          <img
-            src={P4}
-            className="w-[70px] absolute top-20 right-32 transition-transform duration-1000 ease-out"
-            style={{ transform: calculateTransform(-0.02, 0.01) }}
-            alt="Top Right"
-          />
-          <img
-            src={P3}
-            className="w-[20px] rotate-12 absolute bottom-16 left-64 transition-transform duration-1000 ease-out"
-            style={{ transform: calculateTransform(0.015, -0.015) }}
-            alt="Bottom Left"
-          />
-          <img
-            src={P2}
-            className="w-[50px] absolute bottom-32 right-32 transition-transform duration-1000 ease-out"
-            style={{ transform: calculateTransform(-0.01, -0.02) }}
-            alt="Bottom Right"
-          />
-          <img
-            src={P5}
-            className="w-[60px] rotate-90 absolute bottom-6 right-1/3 transition-transform duration-1000 ease-out"
-            style={{ transform: calculateTransform(0.02, -0.01) }}
-            alt="Bottom Center"
-          />
-        </div>
-
-        {/* Content */}
-        <div className="max-w-[560px] overflow-hidden h-full relative flex justify-center items-center z-10">
-          <img
-            className="min-w-[600px] saturate-[1.3] mt-0 ml-28"
-            src={Baby}
-            alt="Baby"
-          />
-
-          {/* Background image */}
-          <img
-            className="absolute top-32 left-10 w-[160px] object-cover rotate-[-83deg] z-10" // Absolute positioning for background image
-            src={Cap}
-            alt=""
-          />
-          <img
-            className="absolute top-[236px] left-[450px] w-[110px] saturate-150 object-cover rotate-[-6deg] z-10" // Absolute positioning for background image
-            src={Cap2}
-            alt=""
-          />
-        </div>
-
-        {/* Another section */}
-        <div className="w-full h-full flex justify-center items-center">
-          <div className="relative w-full h-[340px]">
-            <h1 className="relative text-[40px] text-center inter-extrabold z-10">
-              We invite you to{" "}
-              <span className="bg-violet-600 text-white px-2">celebrate</span>
-            </h1>
-            <p className="text-[40px] text-center inter-extrabold mt-1 flex justify-center items-center z-10">
-              <span className="text-violet-600 underline">
-                Kieron Rodriguez's
-              </span>{" "}
-              <span className="flex mx-3">
-                f
-                <span className="w-3 h-[45px] overflow-hidden">
-                  <img
-                    src={Candle}
-                    className="h-full scale-[1.5] w-auto mt-[5px] object-cover"
-                    alt=""
-                  />
-                </span>
-                rst
-              </span>
-              <span className="bg-rose-100 px-2 -mx-2 relative inline-block">
-                Birthday.{" "}
-                <img
-                  src={Baloon}
-                  alt="Birthday Cap"
-                  className="absolute top-[-103px] rotate-6 right-[-83px] w-32 -z-10"
-                />
-              </span>
-            </p>
-
-            <div className="w-[500px] gap-x-8 mx-auto mt-20 z-50 flex justify-between items-center">
-              <Button className="bg-violet-700 h-16 w-full rounded-lg text-[17px] text-white flex justify-center items-center gap-x-3 font-bold">
-                Let's Celebrate{" "}
-                <img className="rotate-90 right-0 w-10" src={Pop} alt="Pop" />
-              </Button>
-              <Button className="bg-transparent border-[1px] border-violet-300 h-16 w-full rounded-lg flex justify-center items-center gap-x-3 text-[17px] text-black font-bold">
-                See our Gallery{" "}
-                <img className="right-0 w-10" src={Gallery} alt="Gallery" />
-              </Button>
-            </div>
-          </div>
+        <div className="w-[500px] gap-x-8 mx-auto mt-32 flex justify-between items-center">
+          <Button className="bg-violet-700 h-16 w-full rounded-lg text-[17px] text-white flex justify-center items-center gap-x-3 font-bold">
+            Let's Celebrate{" "}
+            <img className="rotate-90 right-0 w-10" src={Pop} alt="Pop" />
+          </Button>
+          <Button className="bg-transparent border-[1px] border-violet-300 h-16 w-full rounded-lg flex justify-center items-center gap-x-3 text-[17px] text-black font-bold">
+            See our Gallery{" "}
+            <img className="right-0 w-10" src={Gallery} alt="Gallery" />
+          </Button>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 
