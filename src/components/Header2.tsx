@@ -103,12 +103,12 @@ const Header2 = () => {
           style={{ transform: calculateTransform(-0.01, -0.02) }}
           alt="Bottom Right"
         />
-        {/* <img
+        <img
           src={P5}
           className="w-[60px] rotate-90 absolute bottom-6 right-1/3 transition-transform duration-1000 ease-out"
           style={{ transform: calculateTransform(0.02, -0.01) }}
           alt="Center"
-        /> */}
+        />
       </div>
 
       {/* Main Content */}

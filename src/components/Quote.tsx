@@ -1,9 +1,3 @@
-import P1 from "../assets/pop1.svg";
-import P2 from "../assets/pop2.svg";
-import P3 from "../assets/pop3.svg";
-import P4 from "../assets/pop4.svg";
-import P5 from "../assets/pop5.svg";
-
 const Quote = () => {
   return (
     <>
@@ -24,27 +18,27 @@ const Quote = () => {
           </h1>
           <div className="hidden lg:block w-full h-[360px] absolute top-0 left-0 bg-white bg-opacity-10 z-10">
             <img
-              src={P1}
+              src={"https://i.ibb.co/ChYJ4td/17.png"}
               className="w-[50px] absolute rotate-12 top-10 left-96 transition-transform duration-1000 ease-out"
               alt=""
             />
             <img
-              src={P4}
+              src={"https://i.ibb.co/hsS30h0/21.png"}
               className="w-[70px] absolute top-14 rotate-45 right-28 transition-transform duration-1000 ease-out"
               alt=""
             />
             <img
-              src={P3}
+              src={"https://i.ibb.co/TgwJ2qH/19.png"}
               className="w-[20px] rotate-12 absolute bottom-12 left-60 transition-transform duration-1000 ease-out"
               alt=""
             />
             <img
-              src={P2}
+              src={"https://i.ibb.co/K5F7xzK/18.png"}
               className="w-[50px] absolute bottom-20 right-20 rotate-45 transition-transform duration-1000 ease-out"
               alt=""
             />
             <img
-              src={P5}
+              src={"https://i.ibb.co/KhYbYTN/20.png"}
               className="w-[50px] rotate-45 absolute bottom-6 right-1/3 transition-transform duration-1000 ease-out"
               alt=""
             />

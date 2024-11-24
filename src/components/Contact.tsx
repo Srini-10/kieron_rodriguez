@@ -1,10 +1,5 @@
 import { useState, useEffect } from "react";
 import { Button } from "@nextui-org/react";
-import Pop from "../assets/pop.svg";
-import P1 from "../assets/cap.svg";
-import P2 from "../assets/pop.svg";
-import P3 from "../assets/pop3.svg";
-import P4 from "../assets/baloon2.svg";
 import Line from "../assets/Line.svg";
 
 const Contact = () => {
@@ -105,7 +100,7 @@ const Contact = () => {
         {/* Animated Images */}
         <div className="w-[1400px] hidden lg:block h-full absolute z-[99] bg-white bg-opacity-10">
           <img
-            src={P1}
+            src={"https://i.ibb.co/LzH629h/24.png"}
             className="w-[70px] absolute top-[99px] left-[88px] -rotate-45 transition-transform duration-1000 ease-out"
             alt=""
           />
@@ -119,12 +114,12 @@ const Contact = () => {
             alt=""
           />
           <img
-            src={P4}
+            src={"https://i.ibb.co/9WrV1F2/26.png"}
             className="w-[130px] absolute -top-[30px] right-[70px] transition-transform duration-1000 ease-out"
             alt=""
           />
           <img
-            src={P3}
+            src={"https://i.ibb.co/TgwJ2qH/19.png"}
             className="w-[50px] rotate-45 absolute bottom-32 left-64 transition-transform duration-1000 ease-out"
             style={{
               transform: calculateTransform(0.015, -0.015),
@@ -133,7 +128,7 @@ const Contact = () => {
             alt=""
           />
           <img
-            src={P2}
+            src={"https://i.ibb.co/ncJYM7T/2.png"}
             className="w-[40px] absolute bottom-16 right-20 transition-transform duration-1000 ease-out"
             style={{ transform: calculateTransform(-0.01, -0.02) }}
             alt=""
@@ -266,12 +261,12 @@ const Contact = () => {
             </div>
 
             {/* Submit Button */}
-            <button
+            <Button
               type="submit"
-              className="w-full px-4 py-2 text-white bg-violet-500 rounded-lg hover:bg-violet-600 focus:outline-none focus:ring-2 focus:ring-violet-300"
+              className="w-full px-4 py-2 inter-medium text-white bg-violet-500 rounded-lg hover:bg-violet-600 focus:outline-none focus:ring-2 focus:ring-violet-300"
             >
               Submit
-            </button>
+            </Button>
           </form>
         </div>
       </div>

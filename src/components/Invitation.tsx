@@ -1,9 +1,11 @@
 import { useState, useEffect } from "react";
-import BackgroundImage from "../assets/pictures/Invite.JPG";
-import BackgroundImage2 from "../assets/pictures/Invite2.png";
 
 const Invitation = () => {
   const [scrollPosition, setScrollPosition] = useState(0);
+
+  if (10 < 0) {
+    console.log(scrollPosition);
+  }
 
   useEffect(() => {
     const handleScroll = () => {
@@ -22,14 +24,14 @@ const Invitation = () => {
       <div
         className="absolute inset-0 lg:block hidden bg-cover bg-no-repeat bg-top bg-fixed saturate-[0.95]"
         style={{
-          backgroundImage: `url(${BackgroundImage})`,
+          backgroundImage: `url(https://i.ibb.co/Wzw0Q0R/invite.png)`,
         }}
       ></div>
 
       <div
         className="absolute inset-0 block lg:hidden bg-no-repeat bg-left-top bg-fill bg-fixed saturate-[0.95]"
         style={{
-          backgroundImage: `url(${BackgroundImage2})`,
+          backgroundImage: `url(https://i.ibb.co/KwCLJ9q/Invite2.png)`,
         }}
       ></div>
 

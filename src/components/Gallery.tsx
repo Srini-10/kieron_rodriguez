@@ -4,29 +4,18 @@ import Minimize from "../assets/icons/Minimize.svg";
 import LeftArrow from "../assets/icons/LeftArrow.svg";
 import RightArrow from "../assets/icons/RightArrow.svg";
 
-import Image1 from "../assets/pictures/1.jpeg";
-import Image2 from "../assets/pictures/2.jpeg";
-import Image3 from "../assets/pictures/3.jpeg";
-import Image4 from "../assets/pictures/4.jpeg";
-import Image5 from "../assets/pictures/5.jpeg";
-import Image6 from "../assets/pictures/6.jpeg";
-import Image7 from "../assets/pictures/7.jpeg";
-import Image8 from "../assets/pictures/8.jpeg";
-import Image9 from "../assets/pictures/9.jpeg";
-import Image10 from "../assets/pictures/10.jpeg";
-
 // Import your images into an array
 const images = [
-  Image1,
-  Image2,
-  Image3,
-  Image4,
-  Image5,
-  Image6,
-  Image7,
-  Image8,
-  Image9,
-  Image10,
+  { url: "https://i.ibb.co/qM5FpSd/IMG-0780.jpg", marginTop: "-30px" },
+  { url: "https://i.ibb.co/RQKB3jz/IMG-1897.jpg", marginTop: "0px" },
+  { url: "https://i.ibb.co/25DBczW/IMG-2126.jpg", marginTop: "-110px" },
+  { url: "https://i.ibb.co/qmvvw5F/IMG-3253.jpg", marginTop: "-30px" },
+  { url: "https://i.ibb.co/pxPK37t/IMG-3443.jpg", marginTop: "0px" },
+  { url: "https://i.ibb.co/3WrtRr4/IMG-3966.jpg", marginTop: "-160px" },
+  { url: "https://i.ibb.co/7gzLxwG/IMG-5838.jpg", marginTop: "0px" },
+  { url: "https://i.ibb.co/5BKmTxx/IMG-5857.jpg", marginTop: "-100px" },
+  { url: "https://i.ibb.co/VgDQyCK/IMG-8032.jpg", marginTop: "-40px" },
+  { url: "https://i.ibb.co/B6kDcv2/IMG-9611.jpg", marginTop: "-50px" },
 ];
 
 const Gallery = () => {
@@ -88,15 +77,18 @@ const Gallery = () => {
         {images.map((image, index) => (
           <div
             key={index}
-            ref={activeImage === image ? imageRef : null} // Attach ref only to the active image
+            ref={activeImage === image.url ? imageRef : null} // Attach ref only to the active image
             className="lg:min-w-[412px] lg:max-w-[412px] min-w-[92vw] h-[240px] lg:h-[300px] flex justify-start items-center gap-x-5 snap-start lg:snap-center transition-all duration-300 lg:duration-1000 ease-in-out"
           >
             <div className="w-full h-full border-[1.5px] border-violet-200 rounded-lg p-4 overflow-hidden relative">
-              <img
-                src={image}
-                className="top-0 left-0 w-full h-full object-cover rounded-lg"
-                alt=""
-              />
+              <div className="w-full h-full rounded-lg overflow-hidden relative">
+                <img
+                  src={image.url}
+                  className="top-0 left-0 w-full h-auto object-cover rounded-lg"
+                  style={{ marginTop: image.marginTop }}
+                  alt=""
+                />
+              </div>
 
               {/* Full Screen Button */}
               {!isFullScreen && (
@@ -130,7 +122,7 @@ const Gallery = () => {
       {isFullScreen && activeIndex !== null && (
         <div className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-90 flex justify-center items-center z-50">
           <img
-            src={images[activeIndex]}
+            src={images[activeIndex].url}
             className="max-w-full max-h-full object-contain"
             alt=""
           />
