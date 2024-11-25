@@ -12,7 +12,7 @@ import Video from "../components/Video";
 const Home = () => {
   return (
     <>
-      <div className="max-w-full h-screen overflow-y-scroll Scrollbar">
+      <div className="max-w-full h-screen overflow-y-scroll">
         <Navbar />
         <Header />
         <Video />
