@@ -19,27 +19,27 @@ const Quote = () => {
           <div className="hidden lg:block w-full h-[360px] absolute top-0 left-0 bg-white bg-opacity-10 z-10">
             <img
               src={"https://i.ibb.co/cN5Zpgc/17.png"}
-              className="w-[50px] absolute rotate-12 top-10 left-96 transition-transform duration-1000 ease-out"
+              className="w-[50px] absolute rotate-12 top-10 left-96 transition-transform duration-1000 ease-out unselectable"
               alt=""
             />
             <img
               src={"https://i.ibb.co/bHF2dPN/21.png"}
-              className="w-[70px] absolute top-14 rotate-45 right-28 transition-transform duration-1000 ease-out"
+              className="w-[70px] absolute top-14 rotate-45 right-28 transition-transform duration-1000 ease-out unselectable"
               alt=""
             />
             <img
               src={"https://i.ibb.co/X8yx8hb/19.png"}
-              className="w-[20px] rotate-12 absolute bottom-12 left-60 transition-transform duration-1000 ease-out"
+              className="w-[20px] rotate-12 absolute bottom-12 left-60 transition-transform duration-1000 ease-out unselectable"
               alt=""
             />
             <img
               src={"https://i.ibb.co/sRjxmjc/18.png"}
-              className="w-[50px] absolute bottom-20 right-20 rotate-45 transition-transform duration-1000 ease-out"
+              className="w-[50px] absolute bottom-20 right-20 rotate-45 transition-transform duration-1000 ease-out unselectable"
               alt=""
             />
             <img
               src={"https://i.ibb.co/f9kbmFh/20.png"}
-              className="w-[50px] rotate-45 absolute bottom-6 right-1/3 transition-transform duration-1000 ease-out"
+              className="w-[50px] rotate-45 absolute bottom-6 right-1/3 transition-transform duration-1000 ease-out unselectable"
               alt=""
             />
           </div>

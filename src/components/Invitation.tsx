@@ -21,14 +21,14 @@ const Invitation = () => {
     <div className="relative w-full h-screen overflow-hidden">
       {/* Parallax Background */}
       <div
-        className="absolute inset-0 lg:block hidden bg-cover bg-no-repeat bg-top bg-fixed saturate-[0.95]"
+        className="absolute inset-0 lg:block hidden bg-cover bg-no-repeat bg-top bg-fixed saturate-[0.95] unselectable"
         style={{
           backgroundImage: `url(https://i.ibb.co/zmPdCWv/Invite.jpg)`,
         }}
       ></div>
 
       <div
-        className="absolute inset-0 block lg:hidden bg-no-repeat bg-left-top bg-fill bg-fixed saturate-[0.95]"
+        className="absolute inset-0 block lg:hidden bg-no-repeat bg-left-top bg-cover bg-fixed saturate-[0.95] unselectable"
         style={{
           backgroundImage: `url(https://i.ibb.co/cr8dz08/Invite2.png)`,
         }}

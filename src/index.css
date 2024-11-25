@@ -148,3 +148,10 @@ code {
   z-index: 0;
   position: absolute;
 }
+
+/* Image Unselectable */
+.unselectable {
+  user-select: none;
+  -webkit-user-drag: none;
+  -moz-user-select: none;
+}

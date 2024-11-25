@@ -72,7 +72,11 @@ const Timeline = () => {
               </h1>
             </div>
             <div className="w-full h-auto rounded-xl overflow-hidden">
-              <img src={"https://i.ibb.co/6rrT11Q/2.jpg"} alt="" className="" />
+              <img
+                src={"https://i.ibb.co/6rrT11Q/2.jpg"}
+                alt=""
+                className="unselectable"
+              />
               <div className="w-full h-[250px] overflow-hidden pt-0.5 mt-2">
                 <h1 className="text-[23px] inter-medium text-white leading-[40px] font-medium mt-3">
                   <span className="bg-clip-text mr-1.5 text-fuchsia-300">
@@ -88,7 +92,11 @@ const Timeline = () => {
               </div>
             </div>
             <div className="w-full h-auto rounded-xl overflow-hidden mt-[50px]">
-              <img src={"https://i.ibb.co/hC9hdY2/4.jpg"} alt="" className="" />
+              <img
+                src={"https://i.ibb.co/hC9hdY2/4.jpg"}
+                alt=""
+                className="unselectable"
+              />
               <div className="w-full h-[250px] overflow-hidden pt-0.5 mt-2">
                 <h1 className="text-[23px] inter-medium text-white leading-[40px] font-medium mt-3">
                   Hats Off to
@@ -103,7 +111,11 @@ const Timeline = () => {
               </div>
             </div>
             <div className="w-full h-auto rounded-xl overflow-hidden mt-[50px]">
-              <img src={"https://i.ibb.co/KNknKp6/6.jpg"} alt="" className="" />
+              <img
+                src={"https://i.ibb.co/KNknKp6/6.jpg"}
+                alt=""
+                className="unselectable"
+              />
               <div className="w-full h-[250px] overflow-hidden pt-0.5 mt-2">
                 <h1 className="text-[23px] inter-medium text-white leading-[40px] font-medium mt-3">
                   <span className="bg-clip-text mr-1.5 text-fuchsia-300">
@@ -118,7 +130,11 @@ const Timeline = () => {
               </div>
             </div>
             <div className="w-full h-auto rounded-xl overflow-hidden mt-[50px]">
-              <img src={"https://i.ibb.co/D5kYh6f/8.jpg"} alt="" className="" />
+              <img
+                src={"https://i.ibb.co/D5kYh6f/8.jpg"}
+                alt=""
+                className="unselectable"
+              />
               <div className="w-full h-[250px] overflow-hidden pt-0.5 mt-2">
                 <h1 className="text-[23px] inter-medium text-white leading-[40px] font-medium mt-3">
                   Golden Hour
@@ -136,7 +152,7 @@ const Timeline = () => {
               <img
                 src={"https://i.ibb.co/gSNQHPQ/10.jpg"}
                 alt=""
-                className=""
+                className="unselectable"
               />
               <div className="w-full h-[250px] overflow-hidden pt-0.5 mt-2">
                 <h1 className="text-[23px] inter-medium text-white leading-[40px] font-medium mt-3">
@@ -155,7 +171,7 @@ const Timeline = () => {
               <img
                 src={"https://i.ibb.co/4tDPG7z/12.jpg"}
                 alt=""
-                className=""
+                className="unselectable"
               />
               <div className="w-full h-[250px] overflow-hidden pt-0.5 mt-2">
                 <h1 className="text-[23px] inter-medium text-white leading-[40px] font-medium mt-3">
@@ -279,14 +295,18 @@ const Timeline = () => {
               >
                 <image
                   href={require("../assets/Favicon.png")}
-                  className="w-[42px] h-[42px]"
+                  className="w-[42px] h-[42px] unselectable"
                 />
               </g>
             </svg>
           </div>
           <div className="w-full h-full">
             <div className="w-full h-auto rounded-xl overflow-hidden mt-[50px]">
-              <img src={"https://i.ibb.co/xqJGssx/1.jpg"} alt="" className="" />
+              <img
+                src={"https://i.ibb.co/xqJGssx/1.jpg"}
+                alt=""
+                className="unselectable"
+              />
               <div className="w-full h-[250px] overflow-hidden pt-0.5 mt-2">
                 <h1 className="text-[23px] inter-medium text-white leading-[40px] font-medium mt-3">
                   The Journey
@@ -302,7 +322,11 @@ const Timeline = () => {
               </div>
             </div>
             <div className="w-full h-auto rounded-xl overflow-hidden mt-[50px]">
-              <img src={"https://i.ibb.co/vzkty0Z/3.jpg"} alt="" className="" />
+              <img
+                src={"https://i.ibb.co/vzkty0Z/3.jpg"}
+                alt=""
+                className="unselectable"
+              />
               <div className="w-full h-[250px] overflow-hidden pt-0.5 mt-2">
                 <h1 className="text-[23px] inter-medium text-white leading-[40px] font-medium mt-3">
                   <span className="bg-clip-text mr-1.5 text-fuchsia-300">
@@ -317,7 +341,11 @@ const Timeline = () => {
               </div>
             </div>
             <div className="w-full h-auto rounded-xl overflow-hidden mt-[50px]">
-              <img src={"https://i.ibb.co/Y3Y0vNv/5.jpg"} alt="" className="" />
+              <img
+                src={"https://i.ibb.co/Y3Y0vNv/5.jpg"}
+                alt=""
+                className="unselectable"
+              />
               <div className="w-full h-[250px] overflow-hidden pt-0.5 mt-2">
                 <h1 className="text-[23px] inter-medium text-white leading-[40px] font-medium mt-3">
                   <span className="bg-clip-text mr-1.5 text-fuchsia-300">
@@ -333,7 +361,11 @@ const Timeline = () => {
               </div>
             </div>
             <div className="w-full h-auto rounded-xl overflow-hidden mt-[50px]">
-              <img src={"https://i.ibb.co/yfyTMty/7.jpg"} alt="" className="" />
+              <img
+                src={"https://i.ibb.co/yfyTMty/7.jpg"}
+                alt=""
+                className="unselectable"
+              />
               <div className="w-full h-[250px] overflow-hidden pt-0.5 mt-2">
                 <h1 className="text-[23px] inter-medium text-white leading-[40px] font-medium mt-3">
                   <span className="bg-clip-text mr-1.5 text-fuchsia-300">
@@ -348,7 +380,11 @@ const Timeline = () => {
               </div>
             </div>
             <div className="w-full h-auto rounded-xl overflow-hidden mt-[50px]">
-              <img src={"https://i.ibb.co/QJw0F1m/9.jpg"} alt="" className="" />
+              <img
+                src={"https://i.ibb.co/QJw0F1m/9.jpg"}
+                alt=""
+                className="unselectable"
+              />
               <div className="w-full h-[250px] overflow-hidden pt-0.5 mt-2">
                 <h1 className="text-[23px] inter-medium text-white leading-[40px] font-medium mt-3">
                   <span className="bg-clip-text mr-1.5 text-fuchsia-300">
@@ -365,7 +401,7 @@ const Timeline = () => {
                 <img
                   src={"https://i.ibb.co/02w9R3b/11.jpg"}
                   alt=""
-                  className=""
+                  className="unselectable"
                 />
                 <div className="w-full h-[250px] overflow-hidden pt-0.5 mt-2">
                   <h1 className="text-[23px] inter-medium text-white leading-[40px] font-medium mt-3">

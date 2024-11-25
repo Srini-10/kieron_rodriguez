@@ -12,7 +12,7 @@ const Navbar = () => {
         </ul>
         <div className="h-[80px] w-[360px] overflow-hidden flex justify-center items-center mx-auto">
           <img
-            className="w-full h-auto scale-75 object-cover -mt-3"
+            className="w-full h-auto scale-75 object-cover -mt-3 unselectable"
             src={"https://i.ibb.co/BqRvNLz/11.png"}
             alt=""
           />
@@ -23,12 +23,12 @@ const Navbar = () => {
               Let's Celebrate
             </Button>
             <img
-              className="absolute z-10 top-7 -left-6 transform -translate-y-1/2 w-10"
+              className="absolute z-10 top-7 -left-6 transform -translate-y-1/2 w-10 unselectable"
               src={"https://i.ibb.co/4pDtqPQ/2.png"}
               alt=""
             />
             <img
-              className="absolute z-10 -top-2 -right-[26px] transform -translate-y-1/2 w-14"
+              className="absolute z-10 -top-2 -right-[26px] transform -translate-y-1/2 w-14 unselectable"
               src={"https://i.ibb.co/Q6myFz5/1.png"}
               alt=""
             />

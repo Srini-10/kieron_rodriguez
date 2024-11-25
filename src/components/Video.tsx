@@ -88,6 +88,7 @@ const Video = () => {
             muted={isMuted}
             loop
             controls={false}
+            playsInline
             autoPlay
             onClick={handleMuteToggle}
           >

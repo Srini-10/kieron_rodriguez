@@ -99,12 +99,12 @@ const Contact = () => {
         <div className="w-[1400px] hidden lg:block h-full absolute z-[99] bg-white bg-opacity-10">
           <img
             src={"https://i.ibb.co/fFdK6L5/24.png"}
-            className="w-[70px] absolute top-[99px] left-[88px] -rotate-45 transition-transform duration-1000 ease-out"
+            className="w-[70px] absolute top-[99px] left-[88px] -rotate-45 transition-transform duration-1000 ease-out unselectable"
             alt=""
           />
           <img
             src={"https://i.ibb.co/DWd798N/27.png"}
-            className="w-[60px] absolute top-[103px] left-[467px] opacity-80 transition-transform duration-1000 ease-out"
+            className="w-[60px] absolute top-[103px] left-[467px] opacity-80 transition-transform duration-1000 ease-out unselectable"
             style={{
               transform: calculateTransform(0.01, 0.01),
               rotate: "30deg",
@@ -113,12 +113,12 @@ const Contact = () => {
           />
           <img
             src={"https://i.ibb.co/q5JVVbK/26.png"}
-            className="w-[130px] absolute -top-[30px] right-[70px] transition-transform duration-1000 ease-out"
+            className="w-[130px] absolute -top-[30px] right-[70px] transition-transform duration-1000 ease-out unselectable"
             alt=""
           />
           <img
             src={"https://i.ibb.co/X8yx8hb/19.png"}
-            className="w-[50px] rotate-45 absolute bottom-32 left-64 transition-transform duration-1000 ease-out"
+            className="w-[50px] rotate-45 absolute bottom-32 left-64 transition-transform duration-1000 ease-out unselectable"
             style={{
               transform: calculateTransform(0.015, -0.015),
               rotate: "40deg",
@@ -127,7 +127,7 @@ const Contact = () => {
           />
           <img
             src={"https://i.ibb.co/4pDtqPQ/2.png"}
-            className="w-[40px] absolute bottom-16 right-20 transition-transform duration-1000 ease-out"
+            className="w-[40px] absolute bottom-16 right-20 transition-transform duration-1000 ease-out unselectable"
             style={{ transform: calculateTransform(-0.01, -0.02) }}
             alt=""
           />

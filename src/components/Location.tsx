@@ -8,7 +8,11 @@ const Location = () => {
     <div className="w-full h-[680px] lg:h-[700px] flex justify-center items-center overflow-hidden p-8 pt-32 relative">
       {/* Map Image */}
       <div className="w-[300px] lg:w-[1000px] lg:h-auto h-[240px] mt-10 lg:mt-0 mx-auto relative">
-        <img src={Map} className="w-full h-auto object-cover" alt="" />
+        <img
+          src={Map}
+          className="w-full h-auto object-cover unselectable"
+          alt=""
+        />
 
         {/* Dot with spreading wave animation */}
         <div className="absolute top-[143px] right-[81px] lg:top-[47.5%] lg:right-[27.5%] -translate-x-1/2 -translate-y-1/2">
@@ -21,10 +25,18 @@ const Location = () => {
       </div>
       <div className="absolute w-[1300px] h-[700px] flex justify-end items-start top-8 right-8">
         <h1 className="flex justify-end text-end items-start text-[12px] lg:text-[15px] w-[305px] lg:w-[363px] text-violet-950">
-          <img src={LocationIcon2} className="w-6 hidden lg:block" alt="" />{" "}
+          <img
+            src={LocationIcon2}
+            className="w-6 hidden lg:block unselectable"
+            alt=""
+          />{" "}
           Heritage Madurai, Melakkal main road, Kochadai, Madurai - 625016,
           Tamil nadu, India.
-          <img src={LocationIcon2} className="w-9 lg:hidden" alt="" />
+          <img
+            src={LocationIcon2}
+            className="w-9 lg:hidden unselectable"
+            alt=""
+          />
         </h1>
       </div>
       <div className="absolute top-0 left-0 w-full h-[700px] flex lg:flex-row flex-col justify-center lg:justify-between lg:px-32 bg-violet-400 bg-opacity-30 items-center">
@@ -32,13 +44,13 @@ const Location = () => {
           <div className="relative min-w-[330px] h-[200px] lg:min-w-[500px] lg:h-[360px] overflow-hidden inter-medium lg:group-hover:min-w-[590px] lg:group-hover:h-[420px] bg-violet-50 border-[1px] border-violet-800 border-opacity-10 bg-opacity-80 backdrop-blur-sm rounded-xl flex justify-center items-center transition-all duration-500 ease-in-out">
             <img
               src={"https://i.ibb.co/vqpY0VR/Location.jpg"}
-              className="w-full h-full lg:w-[560px] lg:h-[390px] brightness-110 object-cover rounded-xl"
+              className="w-full h-full lg:w-[560px] lg:h-[390px] brightness-110 object-cover rounded-xl unselectable"
               alt=""
             />
           </div>
           <img
             src={"https://i.ibb.co/DWd798N/27.png"}
-            className="w-[30px] lg:w-[40px] absolute -bottom-10 -left-10 -rotate-[130deg] opacity-30 transition-transform duration-1000 ease-out"
+            className="w-[30px] lg:w-[40px] absolute -bottom-10 -left-10 -rotate-[130deg] opacity-30 transition-transform duration-1000 ease-out unselectable"
             alt=""
           />
           <Link
@@ -50,7 +62,7 @@ const Location = () => {
                 Heritage Madurai{" "}
                 <img
                   src={LocationIcon}
-                  className="brightness-0 w-4 lg:w-5 ml-1"
+                  className="brightness-0 w-4 lg:w-5 ml-1 unselectable"
                   alt=""
                 />
               </div>

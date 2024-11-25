@@ -71,31 +71,31 @@ const Header = () => {
         <div className="w-[330px] lg:w-[1400px] mx-auto h-[500px] lg:h-full absolute -mt-32 lg:mt-0 bg-white bg-opacity-10">
           <img
             src={"https://i.ibb.co/cN5Zpgc/17.png"}
-            className="w-[20px] lg:w-[50px] absolute top-10 left-[260px] lg:left-96 transition-transform duration-1000 ease-out"
+            className="w-[20px] lg:w-[50px] absolute top-10 left-[260px] unselectable lg:left-96 transition-transform duration-1000 ease-out"
             style={{ transform: calculateTransform(0.01, 0.01) }}
             alt=""
           />
           <img
             src={"https://i.ibb.co/bHF2dPN/21.png"}
-            className="w-[30px] lg:w-[70px] absolute top-20 right-32 transition-transform duration-1000 ease-out"
+            className="w-[30px] lg:w-[70px] absolute top-20 right-32 unselectable transition-transform duration-1000 ease-out"
             style={{ transform: calculateTransform(-0.02, 0.01) }}
             alt=""
           />
           <img
             src={"https://i.ibb.co/X8yx8hb/19.png"}
-            className="w-[20px] rotate-12 absolute bottom-16 left-[315px] lg:left-64 transition-transform duration-1000 ease-out"
+            className="w-[20px] rotate-12 absolute bottom-16 left-[315px] unselectable lg:left-64 transition-transform duration-1000 ease-out"
             style={{ transform: calculateTransform(0.015, -0.015) }}
             alt=""
           />
           <img
             src={"https://i.ibb.co/sRjxmjc/18.png"}
-            className="w-[15px] lg:w-[50px] absolute bottom-32 lg:right-32 transition-transform duration-1000 ease-out"
+            className="w-[15px] lg:w-[50px] absolute bottom-32 lg:right-32 unselectable transition-transform duration-1000 ease-out"
             style={{ transform: calculateTransform(-0.01, -0.02) }}
             alt=""
           />
           <img
             src={"https://i.ibb.co/f9kbmFh/20.png"}
-            className="w-[30px] lg:w-[60px] rotate-90 absolute bottom-6 lg:right-1/3 transition-transform duration-1000 ease-out"
+            className="w-[30px] lg:w-[60px] rotate-90 absolute bottom-6 lg:right-1/3 unselectable transition-transform duration-1000 ease-out"
             style={{ transform: calculateTransform(0.02, -0.01) }}
             alt=""
           />
@@ -105,19 +105,19 @@ const Header = () => {
           {/* Content */}
           <div className="lg:min-w-[560px] overflow-hidden h-full relative flex justify-center items-center z-10">
             <img
-              className="w-[320px] lg:min-w-[600px] saturate-[1.3] mt-0 lg:ml-28"
+              className="w-[320px] lg:min-w-[600px] saturate-[1.3] mt-0 lg:ml-28 unselectable"
               src={"https://i.ibb.co/qxLkRdY/baby3.png"}
               alt=""
             />
 
             {/* Background image */}
             <img
-              className="absolute lg:top-[-15px] lg:left-10 top-[-8px] left-[0px] w-[84px] lg:w-[160px] object-cover rotate-[-87deg] lg:rotate-[-86deg] z-10" // Absolute positioning for background image
+              className="absolute lg:top-[-15px] lg:left-10 top-[-8px] left-[0px] w-[84px] lg:w-[160px] unselectable object-cover rotate-[-87deg] lg:rotate-[-86deg] z-10" // Absolute positioning for background image
               src={"https://i.ibb.co/fFdK6L5/24.png"}
               alt=""
             />
             <img
-              className="absolute lg:top-[86px] lg:left-[450px] top-[47px] left-[220px] w-[60px] lg:w-[110px] saturate-150 object-cover rotate-[-6deg] z-10" // Absolute positioning for background image
+              className="absolute lg:top-[86px] lg:left-[450px] top-[47px] left-[220px] w-[60px] lg:w-[110px] unselectable saturate-150 object-cover rotate-[-6deg] z-10" // Absolute positioning for background image
               src={"https://i.ibb.co/WzqCVMD/25.png"}
               alt=""
             />
@@ -141,7 +141,7 @@ const Header = () => {
                   <span className="w-1.5 lg:w-3 h-[36px] lg:h-[45px] overflow-hidden">
                     <img
                       src={"https://i.ibb.co/z8FJQ3F/Kieron-Rodriguez.png"}
-                      className="h-full scale-[0.5] lg:scale-[1.5] w-auto lg:mt-[5px] object-cover"
+                      className="h-full scale-[0.5] lg:scale-[1.5] w-auto lg:mt-[5px] object-cover unselectable"
                       alt=""
                     />
                   </span>
@@ -152,7 +152,7 @@ const Header = () => {
                   <img
                     src={"https://i.ibb.co/q5JVVbK/26.png"}
                     alt=""
-                    className="absolute top-[-38px] lg:top-[-103px] rotate-6 right-[-20px] lg:right-[-83px] w-12 lg:w-32 -z-10"
+                    className="absolute top-[-38px] lg:top-[-103px] rotate-6 right-[-20px] lg:right-[-83px] w-12 lg:w-32 -z-10 unselectable"
                   />
                 </span>
               </p>
@@ -161,7 +161,7 @@ const Header = () => {
                 <Button className="bg-violet-700 h-12 lg:h-16 w-full rounded-lg text-[17px] text-white flex justify-center items-center gap-x-3 font-bold">
                   Let's Celebrate{" "}
                   <img
-                    className="rotate-90 right-0 w-8 lg:w-10"
+                    className="rotate-90 right-0 w-8 lg:w-10 unselectable"
                     src={"https://i.ibb.co/4pDtqPQ/2.png"}
                     alt=""
                   />
@@ -169,7 +169,7 @@ const Header = () => {
                 <Button className="bg-transparent border-[1px] border-violet-300 h-12 w-full rounded-lg flex justify-center items-center gap-x-3 text-[17px] text-black font-bold">
                   See our Gallery{" "}
                   <img
-                    className="right-0 w-8 lg:w-10"
+                    className="right-0 w-8 lg:w-10 unselectable"
                     src={"https://i.ibb.co/n18WTkT/16.png"}
                     alt=""
                   />
