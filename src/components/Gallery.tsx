@@ -63,7 +63,10 @@ const Gallery = () => {
   };
 
   return (
-    <div className="w-full lg:w-[1280px] h-[540px] lg:h-[700px] overflow-hidden mx-auto lg:p-0 px-[4vw] flex flex-col justify-center">
+    <div
+      id="gallery"
+      className="w-full lg:w-[1200px] h-[540px] lg:h-[700px] overflow-hidden mx-auto lg:p-0 px-[4vw] flex flex-col justify-center"
+    >
       <h1 className="text-black inter-bold w-auto text-[30px] lg:text-[50px] leading-10 lg:leading-none lg:flex justify-start items-center">
         Take a closer look at{" "}
         <span className="text-[25px] lg:text-[50px] flex items-center justify-start lg:ml-2.5">
@@ -78,7 +81,7 @@ const Gallery = () => {
           <div
             key={index}
             ref={activeImage === image.url ? imageRef : null} // Attach ref only to the active image
-            className="lg:min-w-[412px] lg:max-w-[412px] min-w-[92vw] h-[240px] lg:h-[300px] flex justify-start items-center gap-x-5 snap-start lg:snap-center transition-all duration-300 lg:duration-1000 ease-in-out"
+            className="lg:min-w-[386px] lg:max-w-[386px] min-w-[92vw] h-[240px] lg:h-[300px] flex justify-start items-center gap-x-5 snap-start lg:snap-center transition-all duration-300 lg:duration-1000 ease-in-out"
           >
             <div className="w-full h-full border-[1.5px] border-violet-200 rounded-lg p-4 overflow-hidden relative">
               <div className="w-full h-full rounded-lg overflow-hidden relative">

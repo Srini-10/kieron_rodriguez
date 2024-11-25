@@ -18,7 +18,7 @@ const Invitation = () => {
   }, []);
 
   return (
-    <div className="relative w-full h-screen overflow-hidden">
+    <div id="family" className="relative w-full h-screen overflow-hidden">
       {/* Parallax Background */}
       <div
         className="absolute inset-0 lg:block hidden bg-cover bg-no-repeat bg-top bg-fixed saturate-[0.95] unselectable"

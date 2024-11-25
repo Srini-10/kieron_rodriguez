@@ -68,7 +68,7 @@ const Header = () => {
           </svg>
         </div>
 
-        <div className="w-[330px] lg:w-[1400px] mx-auto h-[500px] lg:h-full absolute -mt-32 lg:mt-0 bg-white bg-opacity-10">
+        <div className="w-[330px] xl:w-[1280px] mx-auto h-[500px] lg:h-full absolute -mt-32 lg:mt-0 bg-white bg-opacity-10">
           <img
             src={"https://i.ibb.co/cN5Zpgc/17.png"}
             className="w-[20px] lg:w-[50px] absolute top-10 left-[260px] unselectable lg:left-96 transition-transform duration-1000 ease-out"
@@ -101,23 +101,23 @@ const Header = () => {
           />
         </div>
 
-        <div className="w-[1440px] flex flex-col lg:flex-row justify-between items-center mx-auto">
+        <div className="xl:w-[1160px] flex flex-col lg:flex-row justify-between items-center mx-auto">
           {/* Content */}
-          <div className="lg:min-w-[560px] overflow-hidden h-full relative flex justify-center items-center z-10">
+          <div className="xl:min-w-[520px] overflow-hidden h-full relative flex justify-center items-center z-10">
             <img
-              className="w-[320px] lg:min-w-[600px] saturate-[1.3] mt-0 lg:ml-28 unselectable"
+              className="w-[320px] xl:min-w-[550px] saturate-[1.3] mt-0 unselectable"
               src={"https://i.ibb.co/qxLkRdY/baby3.png"}
               alt=""
             />
 
             {/* Background image */}
             <img
-              className="absolute lg:top-[-15px] lg:left-10 top-[-8px] left-[0px] w-[84px] lg:w-[160px] unselectable object-cover rotate-[-87deg] lg:rotate-[-86deg] z-10" // Absolute positioning for background image
+              className="absolute lg:top-[-18px] lg:-left-5 top-[-8px] left-[0px] w-[84px] lg:w-[150px] unselectable object-cover rotate-[-87deg] lg:rotate-[-86deg] z-10" // Absolute positioning for background image
               src={"https://i.ibb.co/fFdK6L5/24.png"}
               alt=""
             />
             <img
-              className="absolute lg:top-[86px] lg:left-[450px] top-[47px] left-[220px] w-[60px] lg:w-[110px] unselectable saturate-150 object-cover rotate-[-6deg] z-10" // Absolute positioning for background image
+              className="absolute lg:top-[72px] lg:left-[360px] top-[47px] left-[220px] w-[60px] lg:w-[110px] unselectable saturate-150 object-cover rotate-[-6deg] z-10" // Absolute positioning for background image
               src={"https://i.ibb.co/WzqCVMD/25.png"}
               alt=""
             />
@@ -126,13 +126,13 @@ const Header = () => {
           {/* Another section */}
           <div className="w-full h-full flex justify-center items-center lg:mt-0 mt-5">
             <div className="relative w-full h-[340px]">
-              <h1 className="relative text-[19px] lg:text-[40px] text-center inter-extrabold z-10">
+              <h1 className="relative text-[19px] lg:text-[37px] text-center inter-extrabold z-10">
                 We invite you to{" "}
                 <span className="bg-violet-600 text-white px-1 lg:px-2">
                   celebrate
                 </span>
               </h1>
-              <p className="text-[19px] lg:text-[40px] text-center inter-extrabold mt:0.5 lg:mt-1 flex justify-center items-center z-10">
+              <p className="text-[19px] lg:text-[37px] text-center inter-extrabold mt:0.5 lg:mt-1 flex justify-center items-center z-10">
                 <span className="text-violet-600 underline">
                   Kieron Rodriguez's
                 </span>{" "}
@@ -152,12 +152,12 @@ const Header = () => {
                   <img
                     src={"https://i.ibb.co/q5JVVbK/26.png"}
                     alt=""
-                    className="absolute top-[-38px] lg:top-[-103px] rotate-6 right-[-20px] lg:right-[-83px] w-12 lg:w-32 -z-10 unselectable"
+                    className="absolute top-[-38px] lg:top-[-80px] rotate-6 right-[-20px] lg:right-[-70px] w-12 lg:w-28 -z-10 unselectable"
                   />
                 </span>
               </p>
 
-              <div className="w-[300px] lg:w-[500px] gap-x-8 mx-auto mt-16 lg:mt-20 z-50 gap-y-3 lg:gap-y-0 flex flex-col lg:flex-row justify-between items-center">
+              <div className="w-[300px] lg:w-[500px] gap-x-8 mx-auto mt-16 z-50 gap-y-3 lg:gap-y-0 flex flex-col lg:flex-row justify-between items-center">
                 <Button className="bg-violet-700 h-12 lg:h-16 w-full rounded-lg text-[17px] text-white flex justify-center items-center gap-x-3 font-bold">
                   Let's Celebrate{" "}
                   <img
@@ -166,7 +166,7 @@ const Header = () => {
                     alt=""
                   />
                 </Button>
-                <Button className="bg-transparent border-[1px] border-violet-300 h-12 w-full rounded-lg flex justify-center items-center gap-x-3 text-[17px] text-black font-bold">
+                <Button className="bg-transparent border-[1px] border-violet-300 h-12 lg:h-16 w-full rounded-lg flex justify-center items-center gap-x-3 text-[17px] text-black font-bold">
                   See our Gallery{" "}
                   <img
                     className="right-0 w-8 lg:w-10 unselectable"

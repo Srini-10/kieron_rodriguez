@@ -62,6 +62,7 @@ const Contact = () => {
   return (
     <div
       onMouseMove={handleMouseMove}
+      id="contact"
       className="relative w-full h-[850px] lg:h-[700px] flex justify-center items-center overflow-hidden"
     >
       {/* SVG Animated Lines */}

@@ -58,7 +58,7 @@ const Timeline = () => {
 
   return (
     <>
-      <div className="bg-violet-900">
+      <div id="story" className="bg-violet-900">
         <div className="relative w-[1200px] mx-auto h-[5320px] overflow-hidden pt-20 flex gap-x-10 justify-between items-start">
           <div className="w-full h-full">
             <div className="h-[250px] w-full pt-8">

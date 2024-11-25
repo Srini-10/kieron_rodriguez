@@ -1,14 +1,35 @@
 import { Button } from "@nextui-org/react";
 
 const Navbar = () => {
+  const handleScroll = (id: string) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  };
+
   return (
     <>
-      <div className="w-full lg:w-[1300px] h-[80px] lg:mt-6 border-b-[1px] bg-white border-slate-200 flex items-center z-50 justify-between mx-auto">
+      <div className="w-full lg:w-[1200px] h-[80px] lg:mt-6 border-b-[1px] bg-white border-slate-200 flex items-center z-50 justify-between mx-auto">
         <ul className="gap-x-12 items-center lexend-light w-[350px] lg:flex hidden">
-          <li className="">Story</li>
-          <li className="">Family</li>
-          <li className="">Gallery</li>
-          <li className="">Contact</li>
+          <li onClick={() => handleScroll("story")} className="cursor-pointer">
+            Story
+          </li>
+          <li onClick={() => handleScroll("family")} className="cursor-pointer">
+            Family
+          </li>
+          <li
+            onClick={() => handleScroll("gallery")}
+            className="cursor-pointer"
+          >
+            Gallery
+          </li>
+          <li
+            onClick={() => handleScroll("contact")}
+            className="cursor-pointer"
+          >
+            Contact
+          </li>
         </ul>
         <div className="h-[80px] w-[360px] overflow-hidden flex justify-center items-center mx-auto">
           <img
