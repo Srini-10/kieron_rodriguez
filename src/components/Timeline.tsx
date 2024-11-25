@@ -7,6 +7,7 @@ const Timeline = () => {
   const [progress, setProgress] = useState(0);
   const [isAtEnd, setIsAtEnd] = useState(false);
 
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   const calculatePosition = (progressRatio: number) => {
     if (pathRef.current && !isAtEnd) {
       // Skip calculation if locked
@@ -302,7 +303,7 @@ const Timeline = () => {
                 }}
               >
                 <image
-                  href={require("../assets/Favicon.png")}
+                  href={require("../assets/icons/Favicon.png")}
                   className="w-[42px] h-[42px] unselectable"
                 />
               </g>
