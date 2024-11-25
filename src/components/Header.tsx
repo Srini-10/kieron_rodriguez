@@ -1,16 +1,4 @@
-import Baby from "../assets/baby3.png";
 import { Button } from "@nextui-org/react";
-import Pop from "../assets/pop.svg";
-import Gallery from "../assets/gallery.svg";
-import Cap from "../assets/cap.svg";
-import Cap2 from "../assets/cap2.svg";
-import Baloon from "../assets/baloon2.svg";
-import Candle from "../assets/candle.svg";
-import P1 from "../assets/pop1.svg";
-import P2 from "../assets/pop2.svg";
-import P3 from "../assets/pop3.svg";
-import P4 from "../assets/pop4.svg";
-import P5 from "../assets/pop5.svg";
 import { useEffect, useState } from "react";
 
 const Header = () => {
@@ -82,31 +70,31 @@ const Header = () => {
 
         <div className="w-[330px] lg:w-[1400px] mx-auto h-[500px] lg:h-full absolute -mt-32 lg:mt-0 bg-white bg-opacity-10">
           <img
-            src={P1}
+            src={"https://i.ibb.co/cN5Zpgc/17.png"}
             className="w-[20px] lg:w-[50px] absolute top-10 left-[260px] lg:left-96 transition-transform duration-1000 ease-out"
             style={{ transform: calculateTransform(0.01, 0.01) }}
             alt=""
           />
           <img
-            src={P4}
+            src={"https://i.ibb.co/bHF2dPN/21.png"}
             className="w-[30px] lg:w-[70px] absolute top-20 right-32 transition-transform duration-1000 ease-out"
             style={{ transform: calculateTransform(-0.02, 0.01) }}
             alt=""
           />
           <img
-            src={P3}
+            src={"https://i.ibb.co/X8yx8hb/19.png"}
             className="w-[20px] rotate-12 absolute bottom-16 left-[315px] lg:left-64 transition-transform duration-1000 ease-out"
             style={{ transform: calculateTransform(0.015, -0.015) }}
             alt=""
           />
           <img
-            src={P2}
+            src={"https://i.ibb.co/sRjxmjc/18.png"}
             className="w-[15px] lg:w-[50px] absolute bottom-32 lg:right-32 transition-transform duration-1000 ease-out"
             style={{ transform: calculateTransform(-0.01, -0.02) }}
             alt=""
           />
           <img
-            src={P5}
+            src={"https://i.ibb.co/f9kbmFh/20.png"}
             className="w-[30px] lg:w-[60px] rotate-90 absolute bottom-6 lg:right-1/3 transition-transform duration-1000 ease-out"
             style={{ transform: calculateTransform(0.02, -0.01) }}
             alt=""
@@ -118,19 +106,19 @@ const Header = () => {
           <div className="lg:min-w-[560px] overflow-hidden h-full relative flex justify-center items-center z-10">
             <img
               className="w-[320px] lg:min-w-[600px] saturate-[1.3] mt-0 lg:ml-28"
-              src={Baby}
+              src={"https://i.ibb.co/qxLkRdY/baby3.png"}
               alt=""
             />
 
             {/* Background image */}
             <img
               className="absolute lg:top-[-15px] lg:left-10 top-[-8px] left-[0px] w-[84px] lg:w-[160px] object-cover rotate-[-87deg] lg:rotate-[-86deg] z-10" // Absolute positioning for background image
-              src={Cap}
+              src={"https://i.ibb.co/fFdK6L5/24.png"}
               alt=""
             />
             <img
               className="absolute lg:top-[86px] lg:left-[450px] top-[47px] left-[220px] w-[60px] lg:w-[110px] saturate-150 object-cover rotate-[-6deg] z-10" // Absolute positioning for background image
-              src={Cap2}
+              src={"https://i.ibb.co/WzqCVMD/25.png"}
               alt=""
             />
           </div>
@@ -152,7 +140,7 @@ const Header = () => {
                   f
                   <span className="w-1.5 lg:w-3 h-[36px] lg:h-[45px] overflow-hidden">
                     <img
-                      src={Candle}
+                      src={"https://i.ibb.co/z8FJQ3F/Kieron-Rodriguez.png"}
                       className="h-full scale-[0.5] lg:scale-[1.5] w-auto lg:mt-[5px] object-cover"
                       alt=""
                     />
@@ -162,7 +150,7 @@ const Header = () => {
                 <span className="bg-rose-100 px-1 lg:px-2 lg:-mx-2 relative inline-block">
                   Birthday.{" "}
                   <img
-                    src={Baloon}
+                    src={"https://i.ibb.co/q5JVVbK/26.png"}
                     alt=""
                     className="absolute top-[-38px] lg:top-[-103px] rotate-6 right-[-20px] lg:right-[-83px] w-12 lg:w-32 -z-10"
                   />
@@ -174,13 +162,17 @@ const Header = () => {
                   Let's Celebrate{" "}
                   <img
                     className="rotate-90 right-0 w-8 lg:w-10"
-                    src={Pop}
+                    src={"https://i.ibb.co/4pDtqPQ/2.png"}
                     alt=""
                   />
                 </Button>
                 <Button className="bg-transparent border-[1px] border-violet-300 h-12 w-full rounded-lg flex justify-center items-center gap-x-3 text-[17px] text-black font-bold">
                   See our Gallery{" "}
-                  <img className="right-0 w-8 lg:w-10" src={Gallery} alt="" />
+                  <img
+                    className="right-0 w-8 lg:w-10"
+                    src={"https://i.ibb.co/n18WTkT/16.png"}
+                    alt=""
+                  />
                 </Button>
               </div>
             </div>

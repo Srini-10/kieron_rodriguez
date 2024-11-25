@@ -4,30 +4,18 @@ import Minimize from "../assets/icons/Minimize.svg";
 import LeftArrow from "../assets/icons/LeftArrow.svg";
 import RightArrow from "../assets/icons/RightArrow.svg";
 
-// Import images
-import img1 from "../assets/gallery/1.jpg";
-import img2 from "../assets/gallery/2.jpg";
-import img3 from "../assets/gallery/3.png";
-import img4 from "../assets/gallery/4.jpg";
-import img5 from "../assets/gallery/5.jpg";
-import img6 from "../assets/gallery/6.jpg";
-import img7 from "../assets/gallery/7.jpg";
-import img8 from "../assets/gallery/8.jpg";
-import img9 from "../assets/gallery/9.jpg";
-import img10 from "../assets/gallery/10.jpg";
-
 // Images array with imported variables
 const images = [
-  { url: img1, marginTop: "-30px" },
-  { url: img2, marginTop: "0px" },
-  { url: img3, marginTop: "-110px" },
-  { url: img4, marginTop: "-30px" },
-  { url: img5, marginTop: "0px" },
-  { url: img6, marginTop: "-160px" },
-  { url: img7, marginTop: "0px" },
-  { url: img8, marginTop: "-100px" },
-  { url: img9, marginTop: "-40px" },
-  { url: img10, marginTop: "-50px" },
+  { url: "https://i.ibb.co/XXL5N0r/1.jpg", marginTop: "-30px" },
+  { url: "https://i.ibb.co/JkLLpH5/2.jpg", marginTop: "0px" },
+  { url: "https://i.ibb.co/qjF3LXL/3.png", marginTop: "-110px" },
+  { url: "https://i.ibb.co/pKy7tFM/4.jpg", marginTop: "-30px" },
+  { url: "https://i.ibb.co/tYcRn9t/5.jpg", marginTop: "0px" },
+  { url: "https://i.ibb.co/g6KV9LJ/6.jpg", marginTop: "-160px" },
+  { url: "https://i.ibb.co/30sGx5q/7.jpg", marginTop: "0px" },
+  { url: "https://i.ibb.co/4SP29V0/8.jpg", marginTop: "-100px" },
+  { url: "https://i.ibb.co/27rmhBj/9.jpg", marginTop: "-40px" },
+  { url: "https://i.ibb.co/dLp1fH9/10.jpg", marginTop: "-50px" },
 ];
 
 const Gallery = () => {

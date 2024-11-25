@@ -1,11 +1,4 @@
 import { useState, useEffect } from "react";
-import { Button } from "@nextui-org/react";
-import Pop from "../assets/pop.svg";
-import P1 from "../assets/cap.svg";
-import P2 from "../assets/pop.svg";
-import P3 from "../assets/pop3.svg";
-import P4 from "../assets/baloon2.svg";
-import Line from "../assets/Line.svg";
 
 const Contact = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
@@ -105,12 +98,12 @@ const Contact = () => {
         {/* Animated Images */}
         <div className="w-[1400px] hidden lg:block h-full absolute z-[99] bg-white bg-opacity-10">
           <img
-            src={P1}
+            src={"https://i.ibb.co/fFdK6L5/24.png"}
             className="w-[70px] absolute top-[99px] left-[88px] -rotate-45 transition-transform duration-1000 ease-out"
             alt=""
           />
           <img
-            src={Line}
+            src={"https://i.ibb.co/DWd798N/27.png"}
             className="w-[60px] absolute top-[103px] left-[467px] opacity-80 transition-transform duration-1000 ease-out"
             style={{
               transform: calculateTransform(0.01, 0.01),
@@ -119,12 +112,12 @@ const Contact = () => {
             alt=""
           />
           <img
-            src={P4}
+            src={"https://i.ibb.co/q5JVVbK/26.png"}
             className="w-[130px] absolute -top-[30px] right-[70px] transition-transform duration-1000 ease-out"
             alt=""
           />
           <img
-            src={P3}
+            src={"https://i.ibb.co/X8yx8hb/19.png"}
             className="w-[50px] rotate-45 absolute bottom-32 left-64 transition-transform duration-1000 ease-out"
             style={{
               transform: calculateTransform(0.015, -0.015),
@@ -133,7 +126,7 @@ const Contact = () => {
             alt=""
           />
           <img
-            src={P2}
+            src={"https://i.ibb.co/4pDtqPQ/2.png"}
             className="w-[40px] absolute bottom-16 right-20 transition-transform duration-1000 ease-out"
             style={{ transform: calculateTransform(-0.01, -0.02) }}
             alt=""
