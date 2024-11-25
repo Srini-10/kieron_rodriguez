@@ -16,6 +16,7 @@ const Timeline = () => {
     }
   };
 
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   const handleScroll = () => {
     if (pathRef.current) {
       const pathLength = pathRef.current.getTotalLength();
@@ -49,7 +50,7 @@ const Timeline = () => {
     window.addEventListener("scroll", handleScroll);
     handleScroll();
     return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  }, [handleScroll]);
 
   useEffect(() => {
     calculatePosition(progress); // Recalculate position whenever progress updates

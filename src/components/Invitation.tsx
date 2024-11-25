@@ -30,7 +30,7 @@ const Invitation = () => {
       <div
         className="absolute inset-0 block lg:hidden bg-no-repeat bg-left-top bg-cover bg-fixed saturate-[0.95] unselectable"
         style={{
-          backgroundImage: `url(https://i.ibb.co/cr8dz08/Invite2.png)`,
+          backgroundImage: `url(https://i.ibb.co/pw20DHX/Invite.png)`,
         }}
       ></div>
 
