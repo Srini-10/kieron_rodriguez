@@ -138,10 +138,10 @@ const Header = () => {
                 </span>{" "}
                 <span className="flex items-center lg:items-start justify-center mx-1.5 lg:mx-3">
                   f
-                  <span className="w-1.5 lg:w-3 h-[36px] lg:h-[45px] overflow-hidden">
+                  <span className="w-1.5 lg:w-3 h-[36px] lg:h-[41.5px] overflow-hidden">
                     <img
                       src={"https://i.ibb.co/z8FJQ3F/Kieron-Rodriguez.png"}
-                      className="h-full scale-[0.5] lg:scale-[1.5] w-auto lg:mt-[5px] object-cover unselectable"
+                      className="h-full scale-[0.5] lg:scale-[1.4] w-auto lg:mt-[5px] object-cover unselectable"
                       alt=""
                     />
                   </span>

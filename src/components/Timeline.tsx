@@ -5,9 +5,11 @@ const Timeline = () => {
   const logoRef = useRef<SVGCircleElement | null>(null);
   const [iconPosition, setIconPosition] = useState({ x: 0, y: 0 });
   const [progress, setProgress] = useState(0);
+  const [isAtEnd, setIsAtEnd] = useState(false);
 
   const calculatePosition = (progressRatio: number) => {
-    if (pathRef.current) {
+    if (pathRef.current && !isAtEnd) {
+      // Skip calculation if locked
       const pathLength = pathRef.current.getTotalLength();
       const point = pathRef.current.getPointAtLength(
         progressRatio * pathLength
@@ -31,12 +33,16 @@ const Timeline = () => {
           1
         );
         setProgress(progressRatio);
-        calculatePosition(progressRatio);
 
-        const point = pathRef.current.getPointAtLength(
-          progressRatio * pathLength
-        );
-        setIconPosition({ x: point.x, y: point.y });
+        if (progressRatio === 1) {
+          // Lock the position at the endpoint
+          const endPoint = pathRef.current.getPointAtLength(pathLength);
+          setIconPosition({ x: endPoint.x, y: endPoint.y });
+          setIsAtEnd(true);
+        } else {
+          setIsAtEnd(false);
+          calculatePosition(progressRatio);
+        }
       }
     }
   };
@@ -50,16 +56,18 @@ const Timeline = () => {
     window.addEventListener("scroll", handleScroll);
     handleScroll();
     return () => window.removeEventListener("scroll", handleScroll);
-  }, [handleScroll]);
+  }, [calculatePosition, handleScroll]);
 
   useEffect(() => {
-    calculatePosition(progress); // Recalculate position whenever progress updates
-  }, [progress]);
+    if (!isAtEnd) {
+      calculatePosition(progress); // Recalculate when progress updates
+    }
+  }, [progress, isAtEnd, calculatePosition]);
 
   return (
     <>
       <div id="story" className="bg-violet-900">
-        <div className="relative w-[1200px] mx-auto h-[5320px] overflow-hidden pt-20 flex gap-x-10 justify-between items-start">
+        <div className="relative w-[1200px] mx-auto h-[5160px] overflow-hidden pt-20 flex gap-x-10 justify-between items-start">
           <div className="w-full h-full">
             <div className="h-[250px] w-full pt-8">
               <h1 className="bg-pink-300 w-[186px] px-2 ml-2 inter-bold rotate-1 text-[46px] text-violet-900">
@@ -92,7 +100,7 @@ const Timeline = () => {
                 </p>
               </div>
             </div>
-            <div className="w-full h-auto rounded-xl overflow-hidden mt-[50px]">
+            <div className="w-full h-auto rounded-xl overflow-hidden mt-[20px]">
               <img
                 src={"https://i.ibb.co/hC9hdY2/4.jpg"}
                 alt=""
@@ -111,7 +119,7 @@ const Timeline = () => {
                 </p>
               </div>
             </div>
-            <div className="w-full h-auto rounded-xl overflow-hidden mt-[50px]">
+            <div className="w-full h-auto rounded-xl overflow-hidden mt-[20px]">
               <img
                 src={"https://i.ibb.co/KNknKp6/6.jpg"}
                 alt=""
@@ -130,7 +138,7 @@ const Timeline = () => {
                 </p>
               </div>
             </div>
-            <div className="w-full h-auto rounded-xl overflow-hidden mt-[50px]">
+            <div className="w-full h-auto rounded-xl overflow-hidden mt-[20px]">
               <img
                 src={"https://i.ibb.co/D5kYh6f/8.jpg"}
                 alt=""
@@ -149,7 +157,7 @@ const Timeline = () => {
                 </p>
               </div>
             </div>
-            <div className="w-full h-auto rounded-xl overflow-hidden mt-[50px]">
+            <div className="w-full h-auto rounded-xl overflow-hidden mt-[20px]">
               <img
                 src={"https://i.ibb.co/gSNQHPQ/10.jpg"}
                 alt=""
@@ -168,7 +176,7 @@ const Timeline = () => {
                 </p>
               </div>
             </div>
-            <div className="w-full h-auto rounded-xl overflow-hidden mt-[50px]">
+            <div className="w-full h-auto rounded-xl overflow-hidden mt-[20px]">
               <img
                 src={"https://i.ibb.co/4tDPG7z/12.jpg"}
                 alt=""
@@ -234,7 +242,6 @@ const Timeline = () => {
    T 100 3660 
    Q 125 3760, 125 3800 
    Q 125 3860, 100 3960 
-   T 76 4090 
    "
                 style={{
                   fill: "none",
@@ -269,7 +276,7 @@ const Timeline = () => {
                 T 100 3660 
                 Q 125 3760, 125 3800 
                 Q 125 3860, 100 3960 
-                  T 76 4090"
+                "
                   style={{
                     fill: "none",
                     stroke: "url(#gradient-tail)",
@@ -302,7 +309,7 @@ const Timeline = () => {
             </svg>
           </div>
           <div className="w-full h-full">
-            <div className="w-full h-auto rounded-xl overflow-hidden mt-[50px]">
+            <div className="w-full h-auto rounded-xl overflow-hidden mt-[20px]">
               <img
                 src={"https://i.ibb.co/xqJGssx/1.jpg"}
                 alt=""
@@ -322,7 +329,7 @@ const Timeline = () => {
                 </p>
               </div>
             </div>
-            <div className="w-full h-auto rounded-xl overflow-hidden mt-[50px]">
+            <div className="w-full h-auto rounded-xl overflow-hidden mt-[20px]">
               <img
                 src={"https://i.ibb.co/vzkty0Z/3.jpg"}
                 alt=""
@@ -341,7 +348,7 @@ const Timeline = () => {
                 </p>
               </div>
             </div>
-            <div className="w-full h-auto rounded-xl overflow-hidden mt-[50px]">
+            <div className="w-full h-auto rounded-xl overflow-hidden mt-[20px]">
               <img
                 src={"https://i.ibb.co/Y3Y0vNv/5.jpg"}
                 alt=""
@@ -361,7 +368,7 @@ const Timeline = () => {
                 </p>
               </div>
             </div>
-            <div className="w-full h-auto rounded-xl overflow-hidden mt-[50px]">
+            <div className="w-full h-auto rounded-xl overflow-hidden mt-[20px]">
               <img
                 src={"https://i.ibb.co/yfyTMty/7.jpg"}
                 alt=""
@@ -380,7 +387,7 @@ const Timeline = () => {
                 </p>
               </div>
             </div>
-            <div className="w-full h-auto rounded-xl overflow-hidden mt-[50px]">
+            <div className="w-full h-auto rounded-xl overflow-hidden mt-[20px]">
               <img
                 src={"https://i.ibb.co/QJw0F1m/9.jpg"}
                 alt=""
@@ -398,7 +405,7 @@ const Timeline = () => {
                   dreams and potential know no boundaries.
                 </p>
               </div>
-              <div className="w-full h-auto rounded-xl overflow-hidden mt-[50px]">
+              <div className="w-full h-auto rounded-xl overflow-hidden mt-[20px]">
                 <img
                   src={"https://i.ibb.co/02w9R3b/11.jpg"}
                   alt=""
