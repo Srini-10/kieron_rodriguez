@@ -101,7 +101,7 @@ const Contact = () => {
                   checked={formData.response === "celebrate_from_afar"}
                   className="mr-2"
                 />
-                Celebrate from Afar
+                Celebrate from AFAR
               </label>
             </div>
 
