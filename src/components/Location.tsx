@@ -1,11 +1,11 @@
 import { Link } from "react-router-dom";
-import LocationIcon2 from "../assets/Location2.svg";
+import LocationIcon from "../assets/Location.svg";
 import Map from "../assets/Map.png";
 
 const Location = () => {
   return (
     <div className="w-full h-[680px] lg:h-[700px] flex justify-center items-center overflow-hidden p-8 pt-32 relative">
-      <div className="w-[300px] lg:w-[1000px] lg:h-auto h-[240px] mt-10 lg:mt-0 mx-auto relative unselectable">
+      <div className="w-[300px] lg:w-[1000px] lg:h-auto h-[240px] mt-32 lg:mt-0 mx-auto relative unselectable">
         <img
           src={Map}
           className="w-full h-auto object-cover unselectable"
@@ -21,13 +21,9 @@ const Location = () => {
           </div>
         </div>
       </div>
-      <div className="absolute lg:w-[1300px] lg:h-[700px] flex justify-end items-start lg:top-8 lg:right-8">
+      <div className="absolute lg:w-[1300px] lg:h-[700px] -mt-14 flex justify-end items-start lg:top-8 lg:right-8">
         <h1 className="flex justify-center lg:justify-end text-center lg:text-end items-start text-[12px] lg:text-[15px] w-[305px] lg:w-[363px] text-red-950">
-          <img
-            src={LocationIcon2}
-            className="w-6 block unselectable hue-rotate-[100deg] brightness-[90%]"
-            alt=""
-          />{" "}
+          <img src={LocationIcon} className="w-6 block unselectable" alt="" />{" "}
           Heritage Madurai, Melakkal main road, Kochadai, Madurai - 625016,
           Tamil nadu, India.
         </h1>
@@ -48,7 +44,7 @@ const Location = () => {
           />
         </div>
         <Link to={"https://maps.app.goo.gl/2SUC4vLpsdxqVAEQ9"} target="_blank">
-          <button className="w-[180px] lg:w-[210px] h-12 lg:h-14 lg:mr-[120px] mt-56 lg:mt-[43px] flex justify-center items-center bg-white bg-opacity-20 backdrop-blur-sm border border-opacity-25 border-white rounded-full hover:bg-opacity-30 transition-all duration-500 ease-in-out">
+          <button className="w-[180px] lg:w-[210px] h-12 lg:h-14 lg:mr-[120px] mt-[280px] lg:mt-[43px] flex justify-center items-center bg-white bg-opacity-20 backdrop-blur-sm border border-opacity-25 border-white rounded-full hover:bg-opacity-30 transition-all duration-500 ease-in-out">
             <div className="w-[172px] lg:w-[200px] text-[13px] lg:text-[16px] inter-medium h-10 lg:h-12 lg:hover:w-[210px] lg:hover:h-14 bg-white rounded-full flex justify-center items-center transition-all duration-500 ease-in-out">
               Visit location in map
             </div>

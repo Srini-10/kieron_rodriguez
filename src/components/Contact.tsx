@@ -78,14 +78,14 @@ const Contact = () => {
       id="contact"
       className="relative w-full bg-orange-50 lg:pt-0 flex justify-center items-start overflow-hidden pt-20 pb-10 transition-all duration-500 ease-in-out"
     >
-      <div className="lg:relative mx-auto w-[94vw] lg:w-[1300px] lg:mt-10 z-50 flex flex-col justify-center gap-32 items-center">
+      <div className="lg:relative mx-auto w-[320px] lg:w-[1300px] lg:mt-10 z-50 flex flex-col justify-center gap-y-32 lg:gap-12 items-center">
         <div className="text-center text-red-900 lg:text-start">
           <h1 className="text-[36px] lg:text-[80px] -rotate-1.5 whisper-medium z-10 text-start">
             Kindly RSVP by Dec 6th.
           </h1>
         </div>
 
-        <div className="p-6 bg-orange-50 border-[1px] border-red-800 border-opacity-25 -mt-24 lg:mr-10 rounded-lg shadow-lg w-[94vw] lg:w-full max-w-md z-[9999] transition-all duration-500 ease-in-out">
+        <div className="p-6 bg-orange-50 border-[1px] border-red-800 border-opacity-25 -mt-24 lg:-mt-8 lg:mr-10 rounded-lg shadow-lg w-[90vw] lg:w-full max-w-md z-[9999] transition-all duration-500 ease-in-out">
           <h2 className="text-3xl cinzel-medium mb-4 text-red-800">
             RSVP Form
           </h2>
@@ -197,9 +197,10 @@ const Contact = () => {
           </form>
         </div>
 
-        <h1 className="flex cinzel-medium justify-center text-center items-start text-[12px] lg:text-[15px] w-[305px] lg:w-[400px] text-red-950">
-          Heritage Madurai, Melakkal main road, Kochadai, Madurai - 625016,
-          Tamil Nadu, India.
+        <h1 className="flex cinzel-medium justify-center text-center items-start text-[12px] lg:text-[15px] w-[305px] lg:w-[600px] lg:mt-0 -mt-20 text-red-950">
+          ✈️ While your presence is the real treasure, to make our travels
+          smoother, we'd appreciate it if your blessings were non-physical
+          gifts.
         </h1>
       </div>
     </div>
