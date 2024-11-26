@@ -7,7 +7,6 @@ const Header = () => {
     <>
       <div className="w-full bg-orange-50 flex flex-col justify-center items-center">
         <div className="relative w-[340px] lg:w-[1200px] mx-auto flex justify-between items-start">
-          {/* Olympic Logo */}
           <div className="mt-10 w-[300px] lg:w-[400px] overflow-hidden flex flex-col justify-center items-center">
             <h1 className="text-[12px] lg:text-[25px] font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#eab308] to-[#b78428] uppercase">
               Kieron Rodriguez

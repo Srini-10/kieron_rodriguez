@@ -1,19 +1,12 @@
-import React, { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef } from "react";
 import Contact from "../components/Contact";
-import Gallery from "../components/Gallery";
 import Header from "../components/Header";
-import Invitation from "../components/Invitation";
 import Location from "../components/Location";
-import Navbar from "../components/Navbar";
-import Quote from "../components/Quote";
-import Timeline from "../components/Timeline";
-import TimelineMobile from "../components/TimelineMobile";
-import Video from "../components/Video";
 import About from "../components/About";
 
 const Home = () => {
   const [showButton, setShowButton] = useState(false);
-  const scrollContainerRef = useRef<HTMLDivElement>(null); // Define the type of ref
+  const scrollContainerRef = useRef<HTMLDivElement>(null);
 
   // Handle scroll event to toggle button visibility
   useEffect(() => {
