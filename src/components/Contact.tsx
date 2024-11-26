@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import axios from "axios";
 
 const Contact = () => {
@@ -8,17 +8,29 @@ const Contact = () => {
     response: "",
   });
 
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSubmitted, setIsSubmitted] = useState(
+    () => localStorage.getItem("isSubmitted") === "true"
+  );
+
+  useEffect(() => {
+    localStorage.setItem("isSubmitted", String(isSubmitted));
+  }, [isSubmitted]);
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
+    if (!formData.response) {
+      alert("Please fill all required fields.");
+      return;
+    }
+
+    setIsSubmitting(true);
+    setIsSubmitted(false);
+
     try {
       const googleScriptUrl =
-        "https://script.google.com/macros/s/AKfycbyo6rwUBvJ0U_U-vdnL7qZcnYbAb6mHhKNvO8_uKHWHNfa55WANYhzK6-DxfypuYu2V/exec";
-
-      if (!formData.response) {
-        alert("Please fill all required fields.");
-        return;
-      }
+        "/api/macros/s/AKfycbyo6rwUBvJ0U_U-vdnL7qZcnYbAb6mHhKNvO8_uKHWHNfa55WANYhzK6-DxfypuYu2V/exec";
 
       console.log("Form data:", formData);
 
@@ -26,30 +38,21 @@ const Contact = () => {
         headers: {
           "Content-Type": "application/json",
         },
+        withCredentials: false,
       });
 
-      if (response.status === 200 && response.data === "success") {
-        alert("Data submitted successfully!");
-      } else {
-        console.error("Unexpected response:", response.data);
-        alert("Unexpected response from the server.");
-      }
+      console.log(response);
+      setIsSubmitted(true);
     } catch (error: any) {
       console.error("Error submitting form:", error);
-      if (error.code === "ERR_NETWORK") {
-        alert(
-          "Network error. Please check your internet connection or CORS policy."
-        );
-      } else {
-        alert("Failed to submit data. Please try again.");
-      }
+    } finally {
+      setIsSubmitting(false);
+      setFormData({
+        name: "",
+        members: "",
+        response: "",
+      });
     }
-
-    setFormData({
-      name: "",
-      members: "",
-      response: "",
-    });
   };
 
   const handleChange = (
@@ -145,9 +148,16 @@ const Contact = () => {
 
             <button
               type="submit"
-              className="w-full px-4 py-2 text-white bg-red-800 rounded-lg hover:bg-red-800 focus:outline-none focus:ring-2 focus:ring-red-800 ring-red-800"
+              className="w-full px-4 py-2 text-white bg-red-800 rounded-lg hover:bg-red-800 focus:outline-none focus:ring-2 focus:ring-red-800 ring-red-800 flex justify-center items-center"
+              disabled={isSubmitting || isSubmitted}
             >
-              Submit
+              {isSubmitting ? (
+                <span className="animate-spin w-5 h-5 border-2 border-white border-t-transparent rounded-full"></span>
+              ) : isSubmitted ? (
+                "Submitted"
+              ) : (
+                "Submit"
+              )}
             </button>
           </form>
         </div>
