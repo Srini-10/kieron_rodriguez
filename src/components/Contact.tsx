@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import axios from "axios";
+import emailjs from "emailjs-com"; // Import EmailJS SDK
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -29,19 +29,27 @@ const Contact = () => {
     setIsSubmitted(false);
 
     try {
-      const googleScriptUrl =
-        "https://script.google.com/macros/s/AKfycbyo6rwUBvJ0U_U-vdnL7qZcnYbAb6mHhKNvO8_uKHWHNfa55WANYhzK6-DxfypuYu2V/exec";
+      // Set up the email parameters
+      const emailParams = {
+        name: formData.name,
+        members: formData.members,
+        response: formData.response,
+      };
 
-      console.log("Form data:", formData);
+      // Replace with your EmailJS service ID, template ID, and user ID
+      const serviceId = "service_l8hwoab"; // EmailJS Service ID
+      const templateId = "template_2cfn54o"; // EmailJS Template ID
+      const userId = "TvGK3F0-DTgbMCHz5"; // EmailJS User ID
 
-      const response = await axios.post(googleScriptUrl, formData, {
-        headers: {
-          "Content-Type": "application/json",
-        },
-        withCredentials: false,
-      });
+      // Send email using EmailJS
+      const response = await emailjs.send(
+        serviceId,
+        templateId,
+        emailParams,
+        userId
+      );
 
-      console.log(response);
+      console.log("Email sent successfully:", response);
       setIsSubmitted(true);
     } catch (error: any) {
       console.error("Error submitting form:", error);
@@ -85,9 +93,9 @@ const Contact = () => {
                 <input
                   type="radio"
                   name="response"
-                  value="accept_with_joy"
+                  value="Accept_With_Joy"
                   onChange={handleChange}
-                  checked={formData.response === "accept_with_joy"}
+                  checked={formData.response === "Accept_With_Joy"}
                   className="mr-2"
                 />
                 Accept with Joy
@@ -96,16 +104,16 @@ const Contact = () => {
                 <input
                   type="radio"
                   name="response"
-                  value="celebrate_from_afar"
+                  value="Celebrate_From_AFAR"
                   onChange={handleChange}
-                  checked={formData.response === "celebrate_from_afar"}
+                  checked={formData.response === "Celebrate_From_AFAR"}
                   className="mr-2"
                 />
                 Celebrate from AFAR
               </label>
             </div>
 
-            {formData.response === "accept_with_joy" && (
+            {formData.response === "Accept_With_Joy" && (
               <div className="mb-4">
                 <div className="mb-4">
                   <label
