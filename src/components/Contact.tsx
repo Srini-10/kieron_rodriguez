@@ -30,7 +30,7 @@ const Contact = () => {
 
     try {
       const googleScriptUrl =
-        "https://kieronrodriguez.vercel.app/api/macros/s/AKfycbyo6rwUBvJ0U_U-vdnL7qZcnYbAb6mHhKNvO8_uKHWHNfa55WANYhzK6-DxfypuYu2V/exec";
+        "/api/macros/s/AKfycbyo6rwUBvJ0U_U-vdnL7qZcnYbAb6mHhKNvO8_uKHWHNfa55WANYhzK6-DxfypuYu2V/exec";
 
       console.log("Form data:", formData);
 
