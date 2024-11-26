@@ -6,6 +6,7 @@ const Contact = () => {
     name: "",
     members: "",
     response: "",
+    afarMessage: "", // New field for "Celebrate from AFAR"
   });
 
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -34,6 +35,7 @@ const Contact = () => {
         name: formData.name,
         members: formData.members,
         response: formData.response,
+        afarMessage: formData.afarMessage, // Include the new field in the email params
       };
 
       // Replace with your EmailJS service ID, template ID, and user ID
@@ -59,6 +61,7 @@ const Contact = () => {
         name: "",
         members: "",
         response: "",
+        afarMessage: "", // Reset the new field
       });
     }
   };
@@ -73,7 +76,7 @@ const Contact = () => {
   return (
     <div
       id="contact"
-      className="relative w-full bg-orange-50 lg:pt-0 flex justify-center items-start overflow-hidden py-20 transition-all duration-500 ease-in-out"
+      className="relative w-full bg-orange-50 lg:pt-0 flex justify-center items-start overflow-hidden pt-20 pb-10 transition-all duration-500 ease-in-out"
     >
       <div className="lg:relative mx-auto w-[94vw] lg:w-[1300px] lg:mt-10 z-50 flex flex-col justify-center gap-32 items-center">
         <div className="text-center text-red-900 lg:text-start">
@@ -113,6 +116,7 @@ const Contact = () => {
               </label>
             </div>
 
+            {/* Input fields for Accept_With_Joy response */}
             {formData.response === "Accept_With_Joy" && (
               <div className="mb-4">
                 <div className="mb-4">
@@ -154,6 +158,29 @@ const Contact = () => {
               </div>
             )}
 
+            {/* Input field for Celebrate_From_AFAR response */}
+            {formData.response === "Celebrate_From_AFAR" && (
+              <div className="mb-4">
+                <div className="mb-4">
+                  <label
+                    htmlFor="name"
+                    className="block text-sm font-medium text-red-900"
+                  >
+                    Name
+                  </label>
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    value={formData.name}
+                    onChange={handleChange}
+                    className="w-full px-4 py-2 border rounded-lg text-red-700 bg-orange-50 focus:ring-2 focus:ring-red-800 ring-red-800 focus:outline-none"
+                    placeholder="Enter your name"
+                  />
+                </div>
+              </div>
+            )}
+
             <button
               type="submit"
               className="w-full px-4 py-2 text-white bg-red-800 rounded-lg hover:bg-red-800 focus:outline-none focus:ring-2 focus:ring-red-800 ring-red-800 flex justify-center items-center"
@@ -169,6 +196,11 @@ const Contact = () => {
             </button>
           </form>
         </div>
+
+        <h1 className="flex cinzel-medium justify-center text-center items-start text-[12px] lg:text-[15px] w-[305px] lg:w-[400px] text-red-950">
+          Heritage Madurai, Melakkal main road, Kochadai, Madurai - 625016,
+          Tamil Nadu, India.
+        </h1>
       </div>
     </div>
   );
