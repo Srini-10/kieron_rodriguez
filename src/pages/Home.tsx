@@ -53,14 +53,14 @@ const Home = () => {
       >
         <Header />
         <About />
-        <Contact />
         <Location />
+        <Contact />
 
-        {/* <div className="min-w-full h-12 bg-[#710201] flex justify-center items-center">
+        <div className="min-w-full h-12 bg-[#710201] flex justify-center items-center">
           <h1 className="inter-medium text-[16px] lg:text-[17px] text-[#fff7ed] opacity-85 uppercase">
             Kieron Rodriguez
           </h1>
-        </div> */}
+        </div>
 
         {/* Go to Top Button */}
         <button

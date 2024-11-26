@@ -62,7 +62,7 @@ const Contact = () => {
   return (
     <div
       id="contact"
-      className="relative w-full h-[550px] bg-orange-50 lg:h-[900px] flex justify-center items-start overflow-hidden"
+      className="relative w-full h-[550px] bg-orange-50 lg:h-[900px] pt-20 lg:pt-0 flex justify-center items-start overflow-hidden"
     >
       <div className="lg:relative mx-auto w-[94vw] lg:w-[1300px] h-auto lg:h-[800px] lg:mt-10 z-50 flex flex-col justify-center gap-32 items-center">
         <div className="text-center text-red-900 lg:text-start">

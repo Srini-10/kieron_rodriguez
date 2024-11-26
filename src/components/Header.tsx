@@ -10,7 +10,7 @@ const Header = () => {
           {/* Olympic Logo */}
           <div className="mt-10 w-[300px] lg:w-[400px] overflow-hidden flex flex-col justify-center items-center">
             <h1 className="text-[12px] lg:text-[25px] font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#eab308] to-[#b78428] uppercase">
-              Keiron Rodriguez
+              Kieron Rodriguez
             </h1>
             <img
               src={Olympic}

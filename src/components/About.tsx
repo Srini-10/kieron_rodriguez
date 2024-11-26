@@ -12,7 +12,7 @@ const About = () => {
           </div>
           <div className="w-[340px] lg:w-[600px] h-[580px]">
             <h1 className="whisper-medium text-[50px] lg:text-[75px] text-red-900">
-              Keiron Rodriguez
+              Kieron Rodriguez
             </h1>
             <p className="montserrat-medium text-[15px] lg:text-[19px] mt-1 lg:mt-5">
               Meet Kieron Rodriguez - Curious, joyful, and just the right amount
