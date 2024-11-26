@@ -14,7 +14,7 @@ const About = () => {
             <h1 className="whisper-medium text-[50px] md:text-[40px] lg:text-[75px] text-red-900">
               Kieron Rodriguez
             </h1>
-            <p className="montserrat-medium text-[15px] md:text-[13px] lg:text-[19px] mt-1 lg:mt-5">
+            <p className="montserrat-medium text-[15px] md:text-[13px] lg:text-[19px] -mt-3 md:mt-1 lg:mt-5">
               Meet Kieron Rodriguez - Curious, joyful, and just the right amount
               of mischievous, Kieron is a little whirlwind of energy who keeps
               us all on our toes! At just one, he’s already showing off his
