@@ -28,7 +28,7 @@ const Location = () => {
           Tamil nadu, India.
         </h1>
       </div>
-      <div className="absolute top-0 left-0 w-full h-[700px] md:h-[1000px] flex lg:flex-row flex-col justify-center lg:mt-[-148px] lg:justify-between lg:px-32 bg-red-800 bg-opacity-20 items-center">
+      <div className="absolute top-0 left-0 w-full h-[700px] md:h-[1000px] flex lg:flex-row flex-col justify-center lg:mt-[-148px] lg:justify-between lg:px-32 bg-red-900 bg-opacity-20 items-center">
         <div className="w-[350px] h-[220px] md:w-[560px] md:h-[340px] lg:w-[560px] lg:h-[390px] flex p-3 lg:p-4 rounded-xl group justify-center items-center bg-white bg-opacity-20 backdrop-blur-sm border border-opacity-25 border-white hover:bg-opacity-30 transition-all duration-500 ease-in-out">
           <div className="relative min-w-[330px] h-[200px] md:min-w-[540px] md:h-[320px] lg:min-w-[500px] lg:h-[360px] overflow-hidden inter-medium lg:group-hover:min-w-[590px] lg:group-hover:h-[420px] bg-red-50 border-[1px] border-red-800 border-opacity-10 bg-opacity-80 backdrop-blur-sm rounded-xl flex justify-center items-center transition-all duration-500 ease-in-out">
             <img

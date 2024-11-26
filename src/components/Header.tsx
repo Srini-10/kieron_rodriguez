@@ -1,4 +1,4 @@
-import Head from "../assets/Head.png";
+import Head from "../assets/Head.webp";
 
 const Header = () => {
   return (

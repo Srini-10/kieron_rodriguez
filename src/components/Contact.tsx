@@ -76,7 +76,7 @@ const Contact = () => {
   return (
     <div
       id="contact"
-      className="relative w-full bg-orange-50 lg:pt-0 flex justify-center items-start overflow-hidden pt-20 pb-10 transition-all duration-500 ease-in-out"
+      className="relative w-full bg-orange-50 lg:pt-0 flex justify-center items-start overflow-hidden pt-10 md:pt-20 pb-10 transition-all duration-500 ease-in-out"
     >
       <div className="lg:relative mx-auto w-[320px] lg:w-[1300px] lg:mt-10 z-50 flex flex-col justify-center gap-y-32 lg:gap-12 items-center">
         <div className="text-center text-red-900 lg:text-start">
