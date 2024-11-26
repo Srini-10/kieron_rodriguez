@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import Map from "../assets/Map.png";
 import LocationIcon from "../assets/icons/Location.svg";
 import LocationIcon2 from "../assets/icons/Location2.svg";
 
@@ -8,7 +7,7 @@ const Location = () => {
     <div className="w-full h-[680px] lg:h-[700px] flex justify-center items-center overflow-hidden p-8 pt-32 relative">
       <div className="w-[300px] lg:w-[1000px] lg:h-auto h-[240px] mt-10 lg:mt-0 mx-auto relative">
         <img
-          src={Map}
+          src={"https://i.ibb.co/LgF2VFj/Map.png"}
           className="w-full h-auto object-cover unselectable"
           alt=""
         />

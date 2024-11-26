@@ -1,5 +1,3 @@
-import Olympic from "../assets/Olympic3.png";
-import Marks from "../assets/Bookmark.png";
 import Head from "../assets/Head.png";
 
 const Header = () => {
@@ -12,14 +10,14 @@ const Header = () => {
               Kieron Rodriguez
             </h1>
             <img
-              src={Olympic}
+              src={"https://i.ibb.co/YLcj4Hy/Olympic3.png"}
               alt="Olympic Logo"
               className="w-[100px] lg:w-[200px] h-auto object-cover -mt-5 lg:-mt-10 hue-rotate-[3deg]"
             />
           </div>
           <div className="w-full mx-auto flex justify-end items-start">
             <img
-              src={Marks}
+              src={"https://i.ibb.co/YdRjnRN/Bookmark.png"}
               className="h-[200px] lg:h-[280px] hue-rotate-[-5deg]"
               alt=""
             />
