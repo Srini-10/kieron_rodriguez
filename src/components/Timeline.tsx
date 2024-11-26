@@ -67,16 +67,19 @@ const Timeline = () => {
 
   return (
     <>
-      <div id="story" className="bg-violet-900">
+      <div
+        id="story"
+        className="bg-gradient-to-b to-[#710201] via-[#900303] from-[#a30100]"
+      >
         <div className="relative w-[1200px] mx-auto h-[5160px] overflow-hidden pt-20 flex gap-x-10 justify-between items-start">
           <div className="w-full h-full">
             <div className="h-[250px] w-full pt-8">
-              <h1 className="bg-pink-300 w-[186px] px-2 ml-2 inter-bold rotate-1 text-[46px] text-violet-900">
+              <h1 className="bg-rose-300 w-[186px] px-2 ml-2 inter-bold rotate-1 text-[46px] text-red-800">
                 Kieron's
               </h1>
               <h1 className="text-white inter-medium text-[38px] -rotate-3 flex justify-start">
                 One year of
-                <span className="bg-pink-100 px-2 ml-2 text-violet-900">
+                <span className="bg-rose-100 px-2 ml-2 text-red-800">
                   journey
                 </span>
               </h1>
@@ -89,7 +92,7 @@ const Timeline = () => {
               />
               <div className="w-full h-[250px] overflow-hidden pt-0.5 mt-2">
                 <h1 className="text-[23px] inter-medium text-white leading-[40px] font-medium mt-3">
-                  <span className="bg-clip-text mr-1.5 text-fuchsia-300">
+                  <span className="bg-clip-text mr-1.5 text-rose-300">
                     First
                   </span>
                   Milestone
@@ -110,7 +113,7 @@ const Timeline = () => {
               <div className="w-full h-[250px] overflow-hidden pt-0.5 mt-2">
                 <h1 className="text-[23px] inter-medium text-white leading-[40px] font-medium mt-3">
                   Hats Off to
-                  <span className="bg-clip-text ml-1.5 text-fuchsia-300">
+                  <span className="bg-clip-text ml-1.5 text-rose-300">
                     Cuteness
                   </span>
                 </h1>
@@ -128,7 +131,7 @@ const Timeline = () => {
               />
               <div className="w-full h-[250px] overflow-hidden pt-0.5 mt-2">
                 <h1 className="text-[23px] inter-medium text-white leading-[40px] font-medium mt-3">
-                  <span className="bg-clip-text mr-1.5 text-fuchsia-300">
+                  <span className="bg-clip-text mr-1.5 text-rose-300">
                     Best Friends
                   </span>
                   Forever
@@ -148,7 +151,7 @@ const Timeline = () => {
               <div className="w-full h-[250px] overflow-hidden pt-0.5 mt-2">
                 <h1 className="text-[23px] inter-medium text-white leading-[40px] font-medium mt-3">
                   Golden Hour
-                  <span className="bg-clip-text ml-1.5 text-fuchsia-300">
+                  <span className="bg-clip-text ml-1.5 text-rose-300">
                     Glow
                   </span>
                 </h1>
@@ -167,7 +170,7 @@ const Timeline = () => {
               <div className="w-full h-[250px] overflow-hidden pt-0.5 mt-2">
                 <h1 className="text-[23px] inter-medium text-white leading-[40px] font-medium mt-3">
                   Autumn's Little
-                  <span className="bg-clip-text ml-1.5 text-fuchsia-300">
+                  <span className="bg-clip-text ml-1.5 text-rose-300">
                     Wonder
                   </span>
                 </h1>
@@ -185,7 +188,7 @@ const Timeline = () => {
               />
               <div className="w-full h-[250px] overflow-hidden pt-0.5 mt-2">
                 <h1 className="text-[23px] inter-medium text-white leading-[40px] font-medium mt-3">
-                  <span className="bg-clip-text mr-1.5 text-fuchsia-300">
+                  <span className="bg-clip-text mr-1.5 text-rose-300">
                     Nature’s
                   </span>
                   Little Star
@@ -212,9 +215,9 @@ const Timeline = () => {
                   y2="40%"
                   gradientUnits="userSpaceOnUse"
                 >
-                  <stop offset="0%" stopColor="#c4b5fd" stopOpacity="0.2" />
-                  <stop offset="50%" stopColor="#a78bfa" stopOpacity="1" />
-                  <stop offset="100%" stopColor="#7c3aed" stopOpacity="1" />
+                  <stop offset="0%" stopColor="#710201" stopOpacity="0.2" />
+                  <stop offset="50%" stopColor="#900303" stopOpacity="1" />
+                  <stop offset="100%" stopColor="#900303" stopOpacity="1" />
                 </linearGradient>
               </defs>
 
@@ -303,7 +306,7 @@ const Timeline = () => {
                 }}
               >
                 <image
-                  href={require("../assets/icons/Favicon.png")}
+                  href={require("../assets/Cap.png")}
                   className="w-[42px] h-[42px] unselectable"
                 />
               </g>
@@ -319,7 +322,7 @@ const Timeline = () => {
               <div className="w-full h-[250px] overflow-hidden pt-0.5 mt-2">
                 <h1 className="text-[23px] inter-medium text-white leading-[40px] font-medium mt-3">
                   The Journey
-                  <span className="bg-clip-text ml-1.5 text-fuchsia-300">
+                  <span className="bg-clip-text ml-1.5 text-rose-300">
                     Begins
                   </span>
                 </h1>
@@ -338,7 +341,7 @@ const Timeline = () => {
               />
               <div className="w-full h-[250px] overflow-hidden pt-0.5 mt-2">
                 <h1 className="text-[23px] inter-medium text-white leading-[40px] font-medium mt-3">
-                  <span className="bg-clip-text mr-1.5 text-fuchsia-300">
+                  <span className="bg-clip-text mr-1.5 text-rose-300">
                     Little
                   </span>
                   Genius in the Making
@@ -357,7 +360,7 @@ const Timeline = () => {
               />
               <div className="w-full h-[250px] overflow-hidden pt-0.5 mt-2">
                 <h1 className="text-[23px] inter-medium text-white leading-[40px] font-medium mt-3">
-                  <span className="bg-clip-text mr-1.5 text-fuchsia-300">
+                  <span className="bg-clip-text mr-1.5 text-rose-300">
                     Laid-Back
                   </span>
                   Vibes
@@ -377,7 +380,7 @@ const Timeline = () => {
               />
               <div className="w-full h-[250px] overflow-hidden pt-0.5 mt-2">
                 <h1 className="text-[23px] inter-medium text-white leading-[40px] font-medium mt-3">
-                  <span className="bg-clip-text mr-1.5 text-fuchsia-300">
+                  <span className="bg-clip-text mr-1.5 text-rose-300">
                     Splashes
                   </span>
                   of Fun
@@ -396,7 +399,7 @@ const Timeline = () => {
               />
               <div className="w-full h-[250px] overflow-hidden pt-0.5 mt-2">
                 <h1 className="text-[23px] inter-medium text-white leading-[40px] font-medium mt-3">
-                  <span className="bg-clip-text mr-1.5 text-fuchsia-300">
+                  <span className="bg-clip-text mr-1.5 text-rose-300">
                     Sky’s
                   </span>
                   the Limit
@@ -415,7 +418,7 @@ const Timeline = () => {
                 <div className="w-full h-[250px] overflow-hidden pt-0.5 mt-2">
                   <h1 className="text-[23px] inter-medium text-white leading-[40px] font-medium mt-3">
                     Reaching New
-                    <span className="bg-clip-text ml-1.5 text-fuchsia-300">
+                    <span className="bg-clip-text ml-1.5 text-rose-300">
                       Heights
                     </span>
                   </h1>

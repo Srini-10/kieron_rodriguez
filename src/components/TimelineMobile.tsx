@@ -62,16 +62,16 @@ const TimelineMobile = () => {
 
   return (
     <>
-      <div className="bg-violet-900">
+      <div className="bg-gradient-to-b to-[#710201] via-[#900303] from-[#a30100]">
         <div className="relative w-[90vw] mx-auto h-auto overflow-hidden pt-20 flex gap-x-10 justify-between items-start">
           <div className="w-full h-full">
             <div className="h-[250px] w-full pt-8">
-              <h1 className="bg-pink-300 w-[150px] px-2 ml-2 inter-bold rotate-1 text-[36px] text-violet-900">
+              <h1 className="bg-rose-300 w-[150px] px-2 ml-2 inter-bold rotate-1 text-[36px] text-red-800">
                 Kieron's
               </h1>
               <h1 className="text-white inter-medium text-[34px] -rotate-3 flex justify-start">
                 One year of
-                <span className="bg-pink-100 px-2 ml-2 text-violet-900">
+                <span className="bg-rose-100 px-2 ml-2 text-red-800">
                   journey
                 </span>
               </h1>

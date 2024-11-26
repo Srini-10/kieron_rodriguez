@@ -1,182 +1,34 @@
-import { Button } from "@nextui-org/react";
-import { useEffect, useState } from "react";
+import Olympic from "../assets/Olympic3.png";
+import Marks from "../assets/Bookmark.png";
+import Head from "../assets/Head.png";
 
 const Header = () => {
-  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
-  const [smoothPosition, setSmoothPosition] = useState({ x: 0, y: 0 });
-
-  useEffect(() => {
-    let animationFrame: number;
-
-    const updateSmoothPosition = () => {
-      setSmoothPosition((prev) => ({
-        x: prev.x + (mousePosition.x - prev.x) * 0.1, // Ease the transition
-        y: prev.y + (mousePosition.y - prev.y) * 0.1,
-      }));
-      animationFrame = requestAnimationFrame(updateSmoothPosition);
-    };
-
-    animationFrame = requestAnimationFrame(updateSmoothPosition);
-    return () => cancelAnimationFrame(animationFrame);
-  }, [mousePosition]);
-
-  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
-    setMousePosition({ x: e.clientX, y: e.clientY });
-  };
-
-  const calculateTransform = (offsetX: number, offsetY: number): string => {
-    return `translate(${smoothPosition.x * offsetX}px, ${
-      smoothPosition.y * offsetY
-    }px)`;
-  };
-
-  const curves = [
-    "M0,-60 C100,-58, 200,-58, 360,-60",
-    "M0,-40 C100,-38, 200,-38, 360,-40",
-    "M0,-20 C100,-18, 200,-18, 360,-20",
-    "M0,0 C100,2, 200,2, 360,0",
-    "M0,20 C100,22, 200,22, 360,20",
-    "M0,40 C100,42, 200,42, 360,40",
-    "M0,60 C100,62, 200,62, 360,60",
-    "M0,80 C100,82, 200,82, 360,80",
-    "M0,100 C100,98, 200,98, 360,100",
-    "M0,120 C100,114, 200,114, 360,120",
-  ];
-
   return (
     <>
-      <div
-        onMouseMove={handleMouseMove}
-        className="w-full mx-auto lg:h-[681px] mt-16 lg:mt-0 overflow-hidden flex justify-center relative items-center"
-      >
-        <div className="w-full h-full absolute -z-20">
-          <svg
-            viewBox="0 0 360 50"
-            xmlns="http://www.w3.org/2000/svg"
-            className="absolute top-0 left-0 w-full h-full"
-          >
-            {curves.map((curve, index) => (
-              <path
-                key={index}
-                d={curve}
-                stroke="#fbf8ff"
-                strokeWidth="0.5"
-                fill="transparent"
-                className="animate-line -rotate-2 -translate-x-0.5"
-              />
-            ))}
-          </svg>
-        </div>
-
-        <div className="w-[330px] xl:w-[1280px] mx-auto h-[500px] lg:h-full absolute -mt-32 lg:mt-0 bg-white bg-opacity-10">
-          <img
-            src={"https://i.ibb.co/cN5Zpgc/17.png"}
-            className="w-[20px] lg:w-[50px] absolute top-10 left-[260px] unselectable lg:left-96 transition-transform duration-1000 ease-out"
-            style={{ transform: calculateTransform(0.01, 0.01) }}
-            alt=""
-          />
-          <img
-            src={"https://i.ibb.co/bHF2dPN/21.png"}
-            className="w-[30px] lg:w-[70px] absolute top-20 right-32 unselectable transition-transform duration-1000 ease-out"
-            style={{ transform: calculateTransform(-0.02, 0.01) }}
-            alt=""
-          />
-          <img
-            src={"https://i.ibb.co/X8yx8hb/19.png"}
-            className="w-[20px] rotate-12 absolute bottom-16 left-[315px] unselectable lg:left-64 transition-transform duration-1000 ease-out"
-            style={{ transform: calculateTransform(0.015, -0.015) }}
-            alt=""
-          />
-          <img
-            src={"https://i.ibb.co/sRjxmjc/18.png"}
-            className="w-[15px] lg:w-[50px] absolute bottom-32 lg:right-32 unselectable transition-transform duration-1000 ease-out"
-            style={{ transform: calculateTransform(-0.01, -0.02) }}
-            alt=""
-          />
-          <img
-            src={"https://i.ibb.co/f9kbmFh/20.png"}
-            className="w-[30px] lg:w-[60px] rotate-90 absolute bottom-6 lg:right-1/3 unselectable transition-transform duration-1000 ease-out"
-            style={{ transform: calculateTransform(0.02, -0.01) }}
-            alt=""
-          />
-        </div>
-
-        <div className="xl:w-[1160px] flex flex-col lg:flex-row justify-between items-center mx-auto">
-          {/* Content */}
-          <div className="xl:min-w-[520px] overflow-hidden h-full relative flex justify-center items-center z-10">
+      <div className="w-full bg-orange-50 flex flex-col justify-center items-center">
+        <div className="relative w-[340px] lg:w-[1200px] mx-auto flex justify-between items-start">
+          {/* Olympic Logo */}
+          <div className="mt-10 w-[300px] lg:w-[400px] overflow-hidden flex flex-col justify-center items-center">
+            <h1 className="text-[12px] lg:text-[25px] font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#eab308] to-[#b78428] uppercase">
+              Keiron Rodriguez
+            </h1>
             <img
-              className="w-[320px] xl:min-w-[550px] saturate-[1.3] mt-0 unselectable"
-              src={"https://i.ibb.co/qxLkRdY/baby3.png"}
-              alt=""
+              src={Olympic}
+              alt="Olympic Logo"
+              className="w-[100px] lg:w-[200px] h-auto object-cover -mt-5 lg:-mt-10 hue-rotate-[3deg]"
             />
-
-            {/* Background image */}
+          </div>
+          <div className="w-full mx-auto flex justify-end items-start">
             <img
-              className="absolute lg:top-[-18px] lg:-left-5 top-[-8px] left-[0px] w-[84px] lg:w-[150px] unselectable object-cover rotate-[-87deg] lg:rotate-[-86deg] z-10" // Absolute positioning for background image
-              src={"https://i.ibb.co/fFdK6L5/24.png"}
-              alt=""
-            />
-            <img
-              className="absolute lg:top-[72px] lg:left-[360px] top-[47px] left-[220px] w-[60px] lg:w-[110px] unselectable saturate-150 object-cover rotate-[-6deg] z-10" // Absolute positioning for background image
-              src={"https://i.ibb.co/WzqCVMD/25.png"}
+              src={Marks}
+              className="h-[200px] lg:h-[280px] hue-rotate-[-5deg]"
               alt=""
             />
           </div>
-
-          {/* Another section */}
-          <div className="w-full h-full flex justify-center items-center lg:mt-0 mt-5">
-            <div className="relative w-full h-[340px]">
-              <h1 className="relative text-[19px] lg:text-[37px] text-center inter-extrabold z-10">
-                We invite you to{" "}
-                <span className="bg-violet-600 text-white px-1 lg:px-2">
-                  celebrate
-                </span>
-              </h1>
-              <p className="text-[19px] lg:text-[37px] text-center inter-extrabold mt:0.5 lg:mt-1 flex justify-center items-center z-10">
-                <span className="text-violet-600 underline">
-                  Kieron Rodriguez's
-                </span>{" "}
-                <span className="flex items-center lg:items-start justify-center mx-1.5 lg:mx-3">
-                  f
-                  <span className="w-1.5 lg:w-3 h-[36px] lg:h-[41.5px] overflow-hidden">
-                    <img
-                      src={"https://i.ibb.co/z8FJQ3F/Kieron-Rodriguez.png"}
-                      className="h-full scale-[0.5] lg:scale-[1.4] w-auto lg:mt-[5px] object-cover unselectable"
-                      alt=""
-                    />
-                  </span>
-                  rst
-                </span>
-                <span className="bg-rose-100 px-1 lg:px-2 lg:-mx-2 relative inline-block">
-                  Birthday.{" "}
-                  <img
-                    src={"https://i.ibb.co/q5JVVbK/26.png"}
-                    alt=""
-                    className="absolute top-[-38px] lg:top-[-80px] rotate-6 right-[-20px] lg:right-[-70px] w-12 lg:w-28 -z-10 unselectable"
-                  />
-                </span>
-              </p>
-
-              <div className="w-[300px] lg:w-[500px] gap-x-8 mx-auto mt-16 z-50 gap-y-3 lg:gap-y-0 flex flex-col lg:flex-row justify-between items-center">
-                <Button className="bg-violet-700 h-12 lg:h-16 w-full rounded-lg text-[17px] text-white flex justify-center items-center gap-x-3 font-bold">
-                  Let's Celebrate{" "}
-                  <img
-                    className="rotate-90 right-0 w-8 lg:w-10 unselectable"
-                    src={"https://i.ibb.co/4pDtqPQ/2.png"}
-                    alt=""
-                  />
-                </Button>
-                <Button className="bg-transparent border-[1px] border-violet-300 h-12 lg:h-16 w-full rounded-lg flex justify-center items-center gap-x-3 text-[17px] text-black font-bold">
-                  See our Gallery{" "}
-                  <img
-                    className="right-0 w-8 lg:w-10 unselectable"
-                    src={"https://i.ibb.co/n18WTkT/16.png"}
-                    alt=""
-                  />
-                </Button>
-              </div>
-            </div>
-          </div>
+        </div>
+        <div className="w-full lg:w-[1200px] -mt-10 lg:-mt-72 bg-orange-50 flex justify-center items-center">
+          <img src={Head} className="w-full unselectable" alt="Ring" />
+          <div className="absolute w-full h-[1534px] z-10"></div>
         </div>
       </div>
     </>

@@ -9,6 +9,7 @@ import Quote from "../components/Quote";
 import Timeline from "../components/Timeline";
 import TimelineMobile from "../components/TimelineMobile";
 import Video from "../components/Video";
+import About from "../components/About";
 
 const Home = () => {
   const [showButton, setShowButton] = useState(false);
@@ -50,31 +51,21 @@ const Home = () => {
         ref={scrollContainerRef}
         className="max-w-full h-screen overflow-y-scroll relative"
       >
-        <Navbar />
         <Header />
-        <Video />
-        <div className="hidden lg:block">
-          <Timeline />
-        </div>
-        <div className="lg:hidden">
-          <TimelineMobile />
-        </div>
-        <Quote />
-        <Gallery />
-        <Invitation />
+        <About />
         <Contact />
         <Location />
 
-        <div className="min-w-full h-12 bg-violet-950 flex justify-center items-center">
-          <h1 className="inter-medium text-[16px] lg:text-[17px] text-white opacity-85 uppercase">
+        {/* <div className="min-w-full h-12 bg-[#710201] flex justify-center items-center">
+          <h1 className="inter-medium text-[16px] lg:text-[17px] text-[#fff7ed] opacity-85 uppercase">
             Kieron Rodriguez
           </h1>
-        </div>
+        </div> */}
 
         {/* Go to Top Button */}
         <button
           onClick={scrollToTop}
-          className={`fixed z-[9999999] bottom-5 right-5 lg:bottom-6 lg:right-8 w-10 h-10 border-violet-50 border-opacity-30 border-[1px] bg-violet-600 text-white flex justify-center items-center rounded-full shadow-lg hover:bg-violet-700 transition-opacity duration-300 ease-in-out`}
+          className={`fixed z-[9999999] bottom-5 right-5 lg:bottom-6 lg:right-8 w-10 h-10 border-red-50 border-opacity-30 border-[1px] bg-[#710201] text-[#fff7ed] flex justify-center items-center rounded-full shadow-lg hover:bg-red-800 transition-all duration-300 ease-in-out`}
           style={{
             opacity: showButton ? 1 : 0,
             pointerEvents: showButton ? "auto" : "none",
