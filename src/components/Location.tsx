@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import LocationIcon from "../assets/Location.svg";
 import LocationIcon2 from "../assets/Location2.svg";
 
 const Location = () => {
