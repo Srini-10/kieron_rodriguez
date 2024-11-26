@@ -2,11 +2,11 @@ const About = () => {
   return (
     <>
       <div className="bg-orange-50 w-full h-auto">
-        <div className="w-full md:w-[680px] lg:w-[1200px] mx-auto h-[1180px] md:pt-14 lg:pt-0 lg:h-[800px] flex md:flex-row flex-col justify-between items-center">
+        <div className="w-[340px] md:w-[680px] lg:w-[1200px] mx-auto h-[1180px] pt-14 lg:pt-0 lg:h-[800px] flex md:flex-row flex-col justify-between items-center">
           <div className="">
             <img
               src={"https://i.ibb.co/xqJGssx/1.jpg"}
-              className="w-full md:w-[300px] lg:w-[440px] unselectable"
+              className="w-[340px] md:w-[300px] lg:w-[440px] rounded-lg unselectable"
               alt=""
             />
           </div>
