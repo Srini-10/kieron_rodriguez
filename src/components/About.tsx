@@ -2,7 +2,7 @@ const About = () => {
   return (
     <>
       <div className="bg-orange-50 w-full h-auto">
-        <div className="w-[340px] md:w-[680px] lg:w-[1200px] mx-auto h-[1180px] pt-14 lg:pt-0 lg:h-[800px] flex md:flex-row flex-col justify-between items-center">
+        <div className="w-[340px] md:w-[680px] lg:w-[1200px] mx-auto h-[1120px] pt-14 lg:pt-0 lg:h-[800px] flex md:flex-row flex-col justify-between items-center">
           <div className="">
             <img
               src={"https://i.ibb.co/xqJGssx/1.jpg"}
@@ -10,7 +10,7 @@ const About = () => {
               alt=""
             />
           </div>
-          <div className="w-[340px] md:w-[330px] lg:w-[600px] h-[580px] md:h-auto -mt-3 md:mt-0 lg:h-[580px]">
+          <div className="w-[340px] md:w-[330px] lg:w-[600px] h-[580px] md:h-auto md:mt-0 lg:h-[580px]">
             <h1 className="whisper-medium text-[50px] md:text-[40px] lg:text-[75px] text-red-900">
               Kieron Rodriguez
             </h1>
