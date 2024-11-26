@@ -16,18 +16,18 @@ const About = () => {
             </h1>
             <p className="montserrat-medium text-[15px] lg:text-[19px] mt-1 lg:mt-5">
               Meet Kieron Rodriguez - Curious, joyful, and just the right amount
-              of mischief, Kieron is a little whirlwind of energy who keeps us
-              all on our toes! At just one, he’s already showing off his quick
-              grasp, reflexes and surprising strength—did we mention he can lift
-              a watermelon bigger than his head? His favorite partner-in-crime
-              is none other than his big brother, DeFi, our playful
-              Goldendoodle. Together, they make the perfect tag team of fun and
-              chaos! From snatching In-N-Out burgers at the drive-through to
-              intently watching the Olympics with his dad, Kieron’s boundless
-              enthusiasm hints at a future explorer and budding sports lover.
-              This first year has been filled with laughter, love, and countless
-              unforgettable moments—he’s truly the spark of energy that
-              completes our Family.
+              of mischievous, Kieron is a little whirlwind of energy who keeps
+              us all on our toes! At just one, he’s already showing off his
+              quick grasp, sharp reflexes and surprising strength—did we mention
+              he can lift a watermelon bigger than his head? His favorite
+              partner-in-crime is none other than his big brother, DeFi, our
+              playful Goldendoodle. Together, they make the perfect tag team of
+              fun and chaos! From snatching In-N-Out burgers at the
+              drive-through to intently watching the Olympics with his dad,
+              Kieron’s boundless enthusiasm hints at a future explorer and
+              budding sports lover. This first year has been filled with
+              laughter, love, and countless unforgettable moments—he’s truly the
+              spark of energy that completes our family.
             </p>
           </div>
         </div>

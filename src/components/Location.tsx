@@ -21,20 +21,15 @@ const Location = () => {
           </div>
         </div>
       </div>
-      <div className="absolute w-[1300px] h-[700px] flex justify-end items-start top-8 right-8">
-        <h1 className="flex justify-end text-end items-start text-[12px] lg:text-[15px] w-[305px] lg:w-[363px] text-red-950">
+      <div className="absolute lg:w-[1300px] lg:h-[700px] flex justify-end items-start lg:top-8 lg:right-8">
+        <h1 className="flex justify-center lg:justify-end text-center lg:text-end items-start text-[12px] lg:text-[15px] w-[305px] lg:w-[363px] text-red-950">
           <img
             src={LocationIcon2}
-            className="w-6 hidden lg:block unselectable hue-rotate-[100deg] brightness-[90%]"
+            className="w-6 block unselectable hue-rotate-[100deg] brightness-[90%]"
             alt=""
           />{" "}
           Heritage Madurai, Melakkal main road, Kochadai, Madurai - 625016,
           Tamil nadu, India.
-          <img
-            src={LocationIcon2}
-            className="w-9 lg:hidden unselectable hue-rotate-[100deg] brightness-[90%]"
-            alt=""
-          />
         </h1>
       </div>
       <div className="absolute top-0 left-0 w-full h-[700px] flex lg:flex-row flex-col justify-center lg:justify-between lg:px-32 bg-red-800 bg-opacity-20 items-center">
@@ -51,21 +46,6 @@ const Location = () => {
             className="w-[30px] lg:w-[40px] absolute -bottom-10 -left-10 -rotate-[130deg] opacity-30 transition-transform duration-1000 ease-out unselectable"
             alt=""
           />
-          <Link
-            to={"https://maps.app.goo.gl/2SUC4vLpsdxqVAEQ9"}
-            target="_blank"
-          >
-            <button className="absolute bottom-6 right-6 lg:bottom-8 lg:right-8 w-[160px] lg:w-[190px] h-10 lg:h-12 flex justify-center items-center bg-white bg-opacity-20 backdrop-blur-sm border border-opacity-25 border-white rounded-full hover:bg-opacity-30 transition-all duration-500 ease-in-out">
-              <div className="w-[154px] lg:w-[180px] text-[12px] lg:text-[14px] inter-medium h-[34px] lg:h-10 lg:group-hover:w-[190px] lg:group-hover:h-12 bg-white group-hover:border-red-300 lg:border-[1px] rounded-full flex justify-center items-center transition-all duration-500 ease-in-out">
-                Heritage Madurai{" "}
-                <img
-                  src={LocationIcon}
-                  className="brightness-0 w-4 lg:w-5 ml-1 unselectable"
-                  alt=""
-                />
-              </div>
-            </button>
-          </Link>
         </div>
         <Link to={"https://maps.app.goo.gl/2SUC4vLpsdxqVAEQ9"} target="_blank">
           <button className="w-[180px] lg:w-[210px] h-12 lg:h-14 lg:mr-[120px] mt-56 lg:mt-[43px] flex justify-center items-center bg-white bg-opacity-20 backdrop-blur-sm border border-opacity-25 border-white rounded-full hover:bg-opacity-30 transition-all duration-500 ease-in-out">
