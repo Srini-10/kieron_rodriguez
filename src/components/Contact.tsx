@@ -85,13 +85,9 @@ const Contact = () => {
           </h1>
         </div>
 
-        <div className="p-6 bg-orange-50 border-[1px] border-red-800 border-opacity-25 -mt-24 lg:-mt-8 lg:mr-10 rounded-lg shadow-lg w-[90vw] lg:w-full max-w-md z-[9999] transition-all duration-500 ease-in-out">
-          <h2 className="text-3xl cinzel-medium mb-4 text-red-800">
-            RSVP Form
-          </h2>
+        <div className="p-6 bg-orange-50 -mt-24 lg:-mt-8 lg:mr-10 w-[90vw] lg:w-full max-w-md z-[9999] transition-all duration-500 ease-in-out">
           <form onSubmit={handleSubmit}>
             <div className="mb-4">
-              <h3 className="text-red-900 font-medium mb-2">Response</h3>
               <label className="flex items-center mb-2">
                 <input
                   type="radio"
