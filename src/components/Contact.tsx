@@ -81,7 +81,7 @@ const Contact = () => {
       <div className="lg:relative mx-auto w-[320px] lg:w-[1300px] lg:mt-10 z-50 flex flex-col justify-center gap-y-32 lg:gap-12 items-center">
         <div className="text-center text-red-900 lg:text-start">
           <h1 className="text-[36px] lg:text-[80px] -rotate-1.5 whisper-medium z-10 text-start">
-            Kindly RSVP by Dec 6th.
+            Kindly RSVP by Dec 6th
           </h1>
         </div>
 
