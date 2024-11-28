@@ -9,7 +9,8 @@ const Contact = () => {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [showSubmittedText, setShowSubmittedText] = useState(false);
-  const [warning, setWarning] = useState(""); // Warning state
+  const [warning, setWarning] = useState("");
+  const [showNotification, setShowNotification] = useState(false);
 
   const handleSubmit = async (e: any) => {
     e.preventDefault();
@@ -28,9 +29,13 @@ const Contact = () => {
         formData
       );
 
-      // Show submitted text for 2 seconds
+      // Show submitted text for 5 seconds
       setShowSubmittedText(true);
       setTimeout(() => setShowSubmittedText(false), 2000);
+
+      // Show notification for 5 seconds
+      setShowNotification(true);
+      setTimeout(() => setShowNotification(false), 5000);
 
       // Reset form
       setFormData({
@@ -67,6 +72,12 @@ const Contact = () => {
       id="contact"
       className="relative w-full bg-orange-50 lg:pt-0 flex justify-center items-start overflow-hidden pt-10 md:pt-20 pb-10 transition-all duration-500 ease-in-out"
     >
+      {showNotification && (
+        <div className="fixed top-4 right-4 bg-green-500 text-white px-4 py-2 rounded-lg shadow-lg transition-all duration-300">
+          <p>Your response has been submitted successfully!</p>
+        </div>
+      )}
+
       <div className="lg:relative mx-auto w-[320px] lg:w-[1300px] lg:mt-10 z-50 flex flex-col justify-center gap-y-32 lg:gap-12 items-center">
         <div className="text-center text-red-900 lg:text-start">
           <h1 className="text-[36px] lg:text-[80px] -rotate-1.5 whisper-medium z-10 text-start">
