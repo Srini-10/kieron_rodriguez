@@ -1,22 +1,16 @@
-import { useState, useEffect } from "react";
-import emailjs from "emailjs-com"; // Import EmailJS SDK
+import { useState } from "react";
+import emailjs from "emailjs-com";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
     name: "",
     members: "",
     response: "",
-    afarMessage: "", // New field for "Celebrate from AFAR"
+    afarMessage: "",
   });
 
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isSubmitted, setIsSubmitted] = useState(
-    () => localStorage.getItem("isSubmitted") === "true"
-  );
-
-  useEffect(() => {
-    localStorage.setItem("isSubmitted", String(isSubmitted));
-  }, [isSubmitted]);
+  const [showSubmittedText, setShowSubmittedText] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -27,7 +21,6 @@ const Contact = () => {
     }
 
     setIsSubmitting(true);
-    setIsSubmitted(false);
 
     try {
       // Set up the email parameters
@@ -35,13 +28,13 @@ const Contact = () => {
         name: formData.name,
         members: formData.members,
         response: formData.response,
-        afarMessage: formData.afarMessage, // Include the new field in the email params
+        afarMessage: formData.afarMessage,
       };
 
       // Replace with your EmailJS service ID, template ID, and user ID
-      const serviceId = "service_l8hwoab"; // EmailJS Service ID
-      const templateId = "template_2cfn54o"; // EmailJS Template ID
-      const userId = "TvGK3F0-DTgbMCHz5"; // EmailJS User ID
+      const serviceId = "service_l8hwoab";
+      const templateId = "template_2cfn54o";
+      const userId = "TvGK3F0-DTgbMCHz5";
 
       // Send email using EmailJS
       const response = await emailjs.send(
@@ -52,7 +45,10 @@ const Contact = () => {
       );
 
       console.log("Email sent successfully:", response);
-      setIsSubmitted(true);
+
+      // Show submitted text for 2 seconds
+      setShowSubmittedText(true);
+      setTimeout(() => setShowSubmittedText(false), 2000);
     } catch (error: any) {
       console.error("Error submitting form:", error);
     } finally {
@@ -61,7 +57,7 @@ const Contact = () => {
         name: "",
         members: "",
         response: "",
-        afarMessage: "", // Reset the new field
+        afarMessage: "",
       });
     }
   };
@@ -180,12 +176,11 @@ const Contact = () => {
             <button
               type="submit"
               className="w-full px-4 py-2 text-white bg-red-800 rounded-lg hover:bg-red-800 focus:outline-none focus:ring-2 focus:ring-red-800 ring-red-800 flex justify-center items-center"
-              disabled={isSubmitting || isSubmitted}
             >
               {isSubmitting ? (
                 <span className="animate-spin w-5 h-5 border-2 border-white border-t-transparent rounded-full"></span>
-              ) : isSubmitted ? (
-                "Submitted"
+              ) : showSubmittedText ? (
+                "Submitted!"
               ) : (
                 "Submit"
               )}
