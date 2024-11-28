@@ -1,12 +1,11 @@
 import { useState } from "react";
-import emailjs from "emailjs-com";
+import axios from "axios";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
     name: "",
     members: "",
     response: "",
-    afarMessage: "",
   });
 
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -23,42 +22,24 @@ const Contact = () => {
     setIsSubmitting(true);
 
     try {
-      // Set up the email parameters
-      const emailParams = {
-        name: formData.name,
-        members: formData.members,
-        response: formData.response,
-        afarMessage: formData.afarMessage,
-      };
-
-      // Replace with your EmailJS service ID, template ID, and user ID
-      const serviceId = "service_l8hwoab";
-      const templateId = "template_2cfn54o";
-      const userId = "TvGK3F0-DTgbMCHz5";
-
-      // Send email using EmailJS
-      const response = await emailjs.send(
-        serviceId,
-        templateId,
-        emailParams,
-        userId
-      );
-
-      console.log("Email sent successfully:", response);
+      // Send form data to the backend
+      await axios.post("http://localhost:5002/api/send-email", formData);
 
       // Show submitted text for 2 seconds
       setShowSubmittedText(true);
       setTimeout(() => setShowSubmittedText(false), 2000);
-    } catch (error: any) {
-      console.error("Error submitting form:", error);
-    } finally {
-      setIsSubmitting(false);
+
+      // Reset form
       setFormData({
         name: "",
         members: "",
         response: "",
-        afarMessage: "",
       });
+    } catch (error) {
+      console.error("Error submitting form:", error);
+      alert("Failed to send email. Please try again.");
+    } finally {
+      setIsSubmitting(false);
     }
   };
 
