@@ -92,7 +92,7 @@ const Contact = () => {
       <div
         className={`fixed w-[86vw] md:w-[400px] ${
           showNotification ? "top-8 md:top-5" : "-top-16"
-        } bg-red-800 backdrop-blur-[2px] bg-opacity-90 text-white text-[14px] md:text-[15px] px-2 md:px-4 py-3 text-center rounded-lg shadow-lg transition-all duration-700`}
+        } bg-red-800 backdrop-blur-[2px] bg-opacity-90 text-white text-[13px] md:text-[15px] px-2 md:px-4 py-3 text-center rounded-lg shadow-lg transition-all duration-700`}
       >
         <p>Your response has been submitted successfully!</p>
       </div>
