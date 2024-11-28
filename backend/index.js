@@ -20,6 +20,7 @@ app.post("/api/send-email", async (req, res) => {
     });
 
     const mailOptions = {
+      from: "kieronrodriguez23@gmail.com",
       to: "kieronrodriguez23@gmail.com",
       subject: "New RSVP Response",
       text: `
