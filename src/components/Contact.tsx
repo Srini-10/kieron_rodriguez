@@ -23,7 +23,10 @@ const Contact = () => {
 
     try {
       // Send form data to the backend
-      await axios.post("http://localhost:5002/api/send-email", formData);
+      await axios.post(
+        "https://kieron-rodriguez-backend.vercel.app/api/send-email",
+        formData
+      );
 
       // Show submitted text for 2 seconds
       setShowSubmittedText(true);
