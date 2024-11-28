@@ -76,6 +76,7 @@ const Contact = () => {
                   onChange={handleChange}
                   checked={formData.response === "Accept_With_Joy"}
                   className="mr-2"
+                  required
                 />
                 Accept with Joy
               </label>
@@ -87,6 +88,7 @@ const Contact = () => {
                   onChange={handleChange}
                   checked={formData.response === "Celebrate_From_AFAR"}
                   className="mr-2"
+                  required
                 />
                 Celebrate from Afar
               </label>
@@ -110,6 +112,7 @@ const Contact = () => {
                     onChange={handleChange}
                     className="w-full px-4 py-2 border rounded-lg text-red-700 bg-orange-50 focus:ring-2 focus:ring-red-800 ring-red-800 focus:outline-none"
                     placeholder="Enter your name"
+                    required
                   />
                 </div>
 
@@ -129,6 +132,7 @@ const Contact = () => {
                     className="w-full px-4 py-2 border rounded-lg text-red-700 bg-orange-50 focus:ring-2 focus:ring-red-800 ring-red-800 focus:outline-none"
                     placeholder="Enter number of guests"
                     min="1"
+                    required
                   />
                 </div>
               </div>
