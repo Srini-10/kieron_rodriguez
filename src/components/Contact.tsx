@@ -50,7 +50,9 @@ const Contact = () => {
     e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>
   ) => {
     const { name, value } = e.target;
-    setFormData({ ...formData, [name]: value });
+    if (/^[a-zA-Z\s]*$/.test(value)) {
+      setFormData({ ...formData, [name]: value });
+    }
   };
 
   return (
