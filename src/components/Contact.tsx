@@ -2,17 +2,16 @@ import { useState } from "react";
 import axios from "axios";
 
 const Contact = () => {
-  const [warning, setWarning] = useState("");
   const [formData, setFormData] = useState({
     name: "",
     members: "",
     response: "",
   });
-
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [showSubmittedText, setShowSubmittedText] = useState(false);
+  const [warning, setWarning] = useState(""); // Warning state
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = async (e: any) => {
     e.preventDefault();
 
     if (!formData.response) {
@@ -47,14 +46,19 @@ const Contact = () => {
     }
   };
 
-  const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>
-  ) => {
+  const handleChange = (e: any) => {
     const { name, value } = e.target;
-    if (/^[a-zA-Z\s]*$/.test(value)) {
-      setFormData({ ...formData, [name]: value });
+
+    if (name === "name") {
+      // Validate alphabetic input for name field
+      if (/^[a-zA-Z\s]*$/.test(value)) {
+        setFormData({ ...formData, [name]: value });
+        setWarning(""); // Clear the warning if input is valid
+      } else {
+        setWarning("Only alphabetic characters are allowed.");
+      }
     } else {
-      setWarning("Only alphabetic characters are allowed."); // Set the warning
+      setFormData({ ...formData, [name]: value });
     }
   };
 
@@ -114,13 +118,7 @@ const Contact = () => {
                     id="name"
                     name="name"
                     value={formData.name}
-                    onChange={(e) => {
-                      const input = e.target.value;
-                      // Allow only alphabetic characters
-                      if (/^[a-zA-Z\s]*$/.test(input)) {
-                        handleChange(e); // Update state only if the input is valid
-                      }
-                    }}
+                    onChange={handleChange}
                     className="w-full px-4 py-2 border rounded-lg text-red-700 bg-orange-50 focus:ring-2 focus:ring-red-800 ring-red-800 focus:outline-none"
                     required
                   />
@@ -167,13 +165,7 @@ const Contact = () => {
                     id="name"
                     name="name"
                     value={formData.name}
-                    onChange={(e) => {
-                      const input = e.target.value;
-                      // Allow only alphabetic characters
-                      if (/^[a-zA-Z\s]*$/.test(input)) {
-                        handleChange(e); // Update state only if the input is valid
-                      }
-                    }}
+                    onChange={handleChange}
                     className="w-full px-4 py-2 border rounded-lg text-red-700 bg-orange-50 focus:ring-2 focus:ring-red-800 ring-red-800 focus:outline-none"
                     required
                   />
