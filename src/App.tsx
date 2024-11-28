@@ -5,6 +5,10 @@ import Home from "./pages/Home";
 function App() {
   const [screenWidth, setScreenWidth] = useState(window.innerWidth);
 
+  if (10 < 0) {
+    console.log(screenWidth);
+  }
+
   // Update screen width on window resize
   useEffect(() => {
     const handleResize = () => setScreenWidth(window.innerWidth);

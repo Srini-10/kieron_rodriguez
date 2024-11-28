@@ -24,7 +24,7 @@ const Location = () => {
       <div className="absolute lg:w-[960px] mx-auto xl:w-[1300px] lg:h-[700px] mt-5 lg:mt-14 flex justify-end items-start md:mt-0 lg:top-8 lg:right-8">
         <h1 className="flex justify-center lg:justify-end text-center lg:text-end items-start text-[12px] lg:text-[15px] w-[305px] lg:w-[363px] text-red-950">
           <img src={LocationIcon} className="w-6 block unselectable" alt="" />{" "}
-          Heritage Madurai, Melakkal main road, Kochadai, Madurai - 625016,
+          Heritage Madurai, Melakkal Main Road, Kochadai, Madurai - 625016,
           Tamil nadu, India.
         </h1>
       </div>
