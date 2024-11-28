@@ -72,11 +72,13 @@ const Contact = () => {
       id="contact"
       className="relative w-full bg-orange-50 lg:pt-0 flex justify-center items-start overflow-hidden pt-10 md:pt-20 pb-10 transition-all duration-500 ease-in-out"
     >
-      {showNotification && (
-        <div className="fixed top-4 right-4 bg-green-500 text-white px-4 py-2 rounded-lg shadow-lg transition-all duration-300">
-          <p>Your response has been submitted successfully!</p>
-        </div>
-      )}
+      <div
+        className={`fixed w-[86vw] md:w-[400px] ${
+          showNotification ? "top-5" : "-top-16"
+        } bg-red-800 backdrop-blur-[2px] bg-opacity-90 text-white text-[14px] md:text-[15px] px-2 md:px-4 py-3 text-center rounded-lg shadow-lg transition-all duration-700`}
+      >
+        <p>Your response has been submitted successfully!</p>
+      </div>
 
       <div className="lg:relative mx-auto w-[320px] lg:w-[1300px] lg:mt-10 z-50 flex flex-col justify-center gap-y-32 lg:gap-12 items-center">
         <div className="text-center text-red-900 lg:text-start">
