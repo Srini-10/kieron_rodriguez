@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import axios from "axios";
 
 const Contact = () => {
@@ -7,13 +7,28 @@ const Contact = () => {
     members: "",
     response: "",
   });
+  const [isSubmitted, setIsSubmitted] = useState(false); // Track form submission status
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [showSubmittedText, setShowSubmittedText] = useState(false);
-  const [warning, setWarning] = useState("");
   const [showNotification, setShowNotification] = useState(false);
+  const [warning, setWarning] = useState("");
 
+  // Check if form has been submitted on initial load
+  useEffect(() => {
+    const submissionStatus = localStorage.getItem("isSubmitted");
+    if (submissionStatus === "true") {
+      setIsSubmitted(true);
+    }
+  }, []);
+
+  // Handle form submission
   const handleSubmit = async (e: any) => {
     e.preventDefault();
+
+    // If the form is already submitted, prevent re-submission
+    if (isSubmitted) {
+      alert("You have already submitted your response.");
+      return;
+    }
 
     if (!formData.response) {
       alert("Please fill all required fields.");
@@ -29,15 +44,15 @@ const Contact = () => {
         formData
       );
 
-      // Show submitted text for 5 seconds
-      setShowSubmittedText(true);
-      setTimeout(() => setShowSubmittedText(false), 2000);
+      // Store submission status in localStorage
+      localStorage.setItem("isSubmitted", "true");
+      setIsSubmitted(true); // Update the isSubmitted state
 
       // Show notification for 5 seconds
       setShowNotification(true);
       setTimeout(() => setShowNotification(false), 5000);
 
-      // Reset form
+      // Reset form data after submission
       setFormData({
         name: "",
         members: "",
@@ -51,6 +66,7 @@ const Contact = () => {
     }
   };
 
+  // Handle input field changes
   const handleChange = (e: any) => {
     const { name, value } = e.target;
 
@@ -72,6 +88,7 @@ const Contact = () => {
       id="contact"
       className="relative w-full bg-orange-50 lg:pt-0 flex justify-center items-start overflow-hidden pt-10 md:pt-20 pb-10 transition-all duration-500 ease-in-out"
     >
+      {/* Notification when form is submitted */}
       <div
         className={`fixed w-[86vw] md:w-[400px] ${
           showNotification ? "top-5" : "-top-16"
@@ -80,6 +97,7 @@ const Contact = () => {
         <p>Your response has been submitted successfully!</p>
       </div>
 
+      {/* Contact form */}
       <div className="lg:relative mx-auto w-[320px] lg:w-[1300px] lg:mt-10 z-50 flex flex-col justify-center gap-y-32 lg:gap-12 items-center">
         <div className="text-center text-red-900 lg:text-start">
           <h1 className="text-[36px] lg:text-[80px] -rotate-1.5 whisper-medium z-10 text-start">
@@ -191,12 +209,13 @@ const Contact = () => {
             )}
 
             <button
+              disabled={isSubmitted}
               type="submit"
               className="w-full px-4 py-2 text-white bg-red-800 rounded-lg hover:bg-red-800 focus:outline-none focus:ring-2 focus:ring-red-800 ring-red-800 flex justify-center items-center"
             >
               {isSubmitting ? (
                 <span className="animate-spin w-5 h-5 border-2 border-white border-t-transparent rounded-full"></span>
-              ) : showSubmittedText ? (
+              ) : isSubmitted ? (
                 "Submitted!"
               ) : (
                 "Submit"
