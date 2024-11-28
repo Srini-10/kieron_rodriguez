@@ -153,7 +153,13 @@ const Contact = () => {
                     id="name"
                     name="name"
                     value={formData.name}
-                    onChange={handleChange}
+                    onChange={(e) => {
+                      const input = e.target.value;
+                      // Allow only alphabetic characters
+                      if (/^[a-zA-Z\s]*$/.test(input)) {
+                        handleChange(e); // Update state only if the input is valid
+                      }
+                    }}
                     className="w-full px-4 py-2 border rounded-lg text-red-700 bg-orange-50 focus:ring-2 focus:ring-red-800 ring-red-800 focus:outline-none"
                     required
                   />
