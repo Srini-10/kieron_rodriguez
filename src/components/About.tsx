@@ -2,19 +2,19 @@ const About = () => {
   return (
     <>
       <div className="bg-orange-50 w-full h-auto">
-        <div className="w-[340px] md:w-[680px] lg:w-[1200px] mx-auto h-[1120px] pt-14 lg:pt-0 lg:h-[800px] flex md:flex-row flex-col justify-between items-center">
+        <div className="w-[340px] md:w-[680px] lg:w-[860px] xl:w-[1200px] mx-auto h-[1120px] md:h-[600px] md:pt-0 pt-14 lg:pt-0 lg:h-[800px] flex md:flex-row flex-col justify-between items-center">
           <div className="">
             <img
               src={"https://i.ibb.co/xqJGssx/1.jpg"}
-              className="w-[340px] md:w-[300px] lg:w-[440px] rounded-lg unselectable"
+              className="w-[340px] md:w-[300px] lg:w-[380px] xl:w-[440px] rounded-lg unselectable"
               alt=""
             />
           </div>
-          <div className="w-[340px] md:w-[330px] lg:w-[600px] h-[580px] md:h-auto md:mt-0 lg:h-[580px]">
-            <h1 className="whisper-medium text-[50px] md:text-[40px] lg:text-[75px] text-red-900">
+          <div className="w-[340px] md:w-[330px] lg:w-[440px] xl:w-[600px] h-[580px] md:h-auto md:mt-0 lg:h-[580px]">
+            <h1 className="whisper-medium text-[50px] md:text-[40px] lg:text-[70px] xl:text-[75px] text-red-900">
               Kieron Rodriguez
             </h1>
-            <p className="montserrat-medium text-[15px] md:text-[13px] lg:text-[19px] mt-1 lg:mt-5">
+            <p className="montserrat-medium text-[15px] md:text-[13px] lg:text-[17px] xl:text-[19px] mt-1 lg:mt-5">
               Meet Kieron Rodriguez – Explorative, cheerful, and just the right
               amount of mischievous! Kieron is a little whirlwind of energy who
               keeps us all on our toes. At just one, he’s already showing off
