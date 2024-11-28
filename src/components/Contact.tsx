@@ -2,6 +2,7 @@ import { useState } from "react";
 import axios from "axios";
 
 const Contact = () => {
+  const [warning, setWarning] = useState("");
   const [formData, setFormData] = useState({
     name: "",
     members: "",
@@ -52,6 +53,8 @@ const Contact = () => {
     const { name, value } = e.target;
     if (/^[a-zA-Z\s]*$/.test(value)) {
       setFormData({ ...formData, [name]: value });
+    } else {
+      setWarning("Only alphabetic characters are allowed."); // Set the warning
     }
   };
 
@@ -111,11 +114,20 @@ const Contact = () => {
                     id="name"
                     name="name"
                     value={formData.name}
-                    onChange={handleChange}
+                    onChange={(e) => {
+                      const input = e.target.value;
+                      // Allow only alphabetic characters
+                      if (/^[a-zA-Z\s]*$/.test(input)) {
+                        handleChange(e); // Update state only if the input is valid
+                      }
+                    }}
                     className="w-full px-4 py-2 border rounded-lg text-red-700 bg-orange-50 focus:ring-2 focus:ring-red-800 ring-red-800 focus:outline-none"
-                    placeholder="Enter your name"
                     required
                   />
+                  {/* Warning message */}
+                  {warning && (
+                    <p className="mt-2 text-sm text-red-600">{warning}</p>
+                  )}
                 </div>
 
                 <div>
@@ -165,6 +177,10 @@ const Contact = () => {
                     className="w-full px-4 py-2 border rounded-lg text-red-700 bg-orange-50 focus:ring-2 focus:ring-red-800 ring-red-800 focus:outline-none"
                     required
                   />
+                  {/* Warning message */}
+                  {warning && (
+                    <p className="mt-2 text-sm text-red-600">{warning}</p>
+                  )}
                 </div>
               </div>
             )}
