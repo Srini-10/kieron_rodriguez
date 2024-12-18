@@ -47,7 +47,7 @@ const Home = () => {
         <Header />
         <About />
         <Location />
-        <Contact />
+{/*         <Contact /> */}
 
         <div className="min-w-full h-12 bg-[#710201] flex justify-center items-center">
           <h1 className="inter-medium text-[16px] lg:text-[17px] text-[#fff7ed] opacity-85 uppercase">
